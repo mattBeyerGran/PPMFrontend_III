@@ -20,7 +20,12 @@ export default new Vuetify({
         ppmDrawerColor: "#E8F0F7", 
         ppmTabsBGColor: "#E8F0F7", 
         ppmPlanTitleColor: "#2FA0E0",
+        ppmPlanTitleColor2: "#F2B82B",
         ppmTableTextColor:"#2FA0E0",
+        ppmchartRed: "#F44336",
+        ppmchartGreen: "#4CAF50",
+        ppmchartYellow: "#FFEB3B",
+        ppmSlider: "#F2B82B",
         primary: "#0682BC",
         secondary: "#354A5F",
         button: "#2FA0E0",
@@ -36,11 +41,8 @@ export default new Vuetify({
         teilplan: colors.deepPurple,
         edit: colors.cyan,
         delete: colors.pink.darken3,
-        zurueck: colors.purple.darken1,
-        ppmchartRed: "#F44336",
-        ppmchartGreen: "#4CAF50",
-        ppmchartYellow: "#FFEB3B",
-        ppmSlider: "#F2B82B"
+        zurueck: colors.purple.darken1
+        
       }
     }
   }

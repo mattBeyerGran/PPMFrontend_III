@@ -41,7 +41,8 @@ export default {
           { title: "Geschäftsplanung", icon: "mdi-file-find", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "geschaeft" },
           { title: "Ertragsplanung", icon: "mdi-certificate", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "ertrag" },           
           { title: "Kostenplanung", icon: "mdi-hospital-box", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "patienten" },
-          { title: "RWA-Planung", icon: "mdi-doctor", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "mitarbeiter" }
+          { title: "RWA-Planung", icon: "mdi-doctor", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "mitarbeiter" },
+          { title: "Topic-Page-Template", icon: "mdi-account-hard-hat", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "topictemplate" }
         ]
       }
       return appItems;

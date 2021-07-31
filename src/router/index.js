@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 import UnderConstruction from '../components/UnderConstruction.vue'
 import Dashboard from '../components/Analytics/Dashboard.vue'
 import Status from '../components/Analytics/Status.vue'
-import Test from '../components/Test.vue'
+import TopicPageTemplate from '../components/TopicPage/TopicPageTemplate.vue'
 
 /* USER */
 import Profil from '../components/Auth/Profile.vue'
@@ -50,9 +50,9 @@ const routes = [
     component: UnderConstruction
   },
   {
-    path: '/test',
-    name: 'test',
-    component: Test
+    path: '/topictemplate',
+    name: 'topictemplate',
+    component: TopicPageTemplate
   },
   //  PLAENE 
   {

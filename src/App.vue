@@ -37,6 +37,9 @@ export default {
 .topmargin{
   margin-top: 35px;
 }
+.bottommargin{
+  margin-bottom: 35px;
+}
 .leftmargin{
   margin-left: 200px;
   
