@@ -75,7 +75,7 @@ export default {
     user(value){
       // if user value changes, redirect to home page
       if (value) {
-        this.$router.push("/dashboard");
+        this.$router.push("/status");
       }
     }
   },

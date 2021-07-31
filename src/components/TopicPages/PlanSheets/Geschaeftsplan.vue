@@ -6,7 +6,7 @@
             color="ppmLightTextColor" 
             background-color="ppmTabsBGColor"
             show-arrows
-            
+            class="elevation-24"
         >
             <v-tabs-slider color="ppmSlider"></v-tabs-slider>
 
@@ -18,7 +18,7 @@
         <!-- Tabelle -->
         <v-tabs-items v-model="tab" class="mt-4">
             <v-tab-item value="eins">
-               <v-simple-table>
+               <v-simple-table class="elevation-24">
                 <template v-slot:default>
                   <thead>
                     <tr>
@@ -79,8 +79,17 @@
                       <td>{{ item.Okt }}</td>
                       <td>{{ item.Nov }}</td>
                       <td>{{ item.Dez }}</td>
-                      
+                       <td> <v-icon dark color="edit" @click="editItem(item)">mdi-flag-checkered</v-icon></td>
+                       <td> <v-icon dark color="edit" @click="editItem(item)">mdi-account-multiple-check</v-icon></td>
+                      <td> <v-icon dark color="delete" @click="editItem(item)">mdi-head-question</v-icon></td>
+                           <td> <v-icon dark color="edit" @click="editItem(item)">mdi-head-question-outline</v-icon></td>
+                        <td> <v-icon dark color="delete" @click="editItem(item)">mdi-calculator</v-icon></td>
+                        <td> <v-icon dark color="delete" @click="editItem(item)">mdi-calculator-variant</v-icon></td>
+                        <td> <v-icon dark color="delete" @click="editItem(item)">mdi-calculator-variant-outline</v-icon></td>
+                        <td> <v-icon dark color="delete" @click="editItem(item)">mdi-earth</v-icon></td>
+                        <td> <v-icon dark color="delete" @click="editItem(item)">mdi-view-dashboard</v-icon></td>
                     </tr>
+                    
                   </tbody>
                 </template>  
       </v-simple-table>

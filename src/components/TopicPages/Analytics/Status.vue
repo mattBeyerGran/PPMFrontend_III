@@ -1,7 +1,7 @@
 <template>
-
   
   <v-container>
+    <div class="white">Text</div>
      <GChart
           class="pt-5"
           :settings="{ packages: ['corechart', 'gantt', 'table'] }"
@@ -46,36 +46,8 @@ export default {
               ['Bilanz', 'Bilanzplanung', null, new Date(2021, 9, 12), this.daysToMilliseconds(12), 0, 'Ertrag,Kosten']
          ],
             ganttOptions: {
-              height: 600
-            },
-
-            sankeyOptions: {
-              height: 600,
-              sankey: {
-                node: {
-                  label: {
-                    fontName: 'arial',
-                    fontSize: 14,
-                    color: '#000',
-                    bold: true,
-                    italic: false
-                  },
-                  width: 25,
-                  colors: this.colors ,
-                  nodePadding: 100
-                },
-                link: {
-                  colorMode: 'gradient',
-                  colors: this.colors ,
-                  color: { stroke: 'black', strokeWidth: 0.3 }
-                }
-              }
-              
-              
-              
-            }
-            
-            
+              height: 300
+            },                
     }
   },
   components: {

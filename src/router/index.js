@@ -14,11 +14,12 @@ import Signin from '../components/Auth/Signin.vue'
 /* TEILPLAN */
 
 import Geschaeft from '../components/TopicPages/Geschaeftsplanung.vue'
+import Ertrag from '../components/TopicPages/Ertragsplanung.vue'
+import Kosten from '../components/TopicPages/Kostenplanung.vue'
+import RWA from '../components/TopicPages/RWAplanung.vue'
 
-import Patienten from '../components/Anwendungen/Patienten.vue'
-import Mitarbeiter from '../components/Anwendungen/Mitarbeiter.vue'
-import Visiten from '../components/Anwendungen/Visiten.vue'
-import Ertrag from '../components/Anwendungen/Ertragsplanung.vue'
+
+
 
 
 
@@ -49,12 +50,6 @@ const routes = [
   },
   //  PLAENE 
   {
-    path: '/visiten',
-    name: 'visiten',
-    component: Visiten
-  },
-  
-  {
     path: '/geschaeft',
     name: 'geschaeft',
     component: Geschaeft
@@ -65,19 +60,14 @@ const routes = [
     component: Ertrag
   },
   {
-    path: '/patienten',
-    name: 'patienten',
-    component: Patienten,
-    beforeEnter: (to, from, next) => {
-      // eslint-disable-next-line no-console
-      console.log('inside Patienten route');  
-      next();
-    }
+    path: '/kosten',
+    name: 'kosten',
+    component: Kosten
   },
   {
-    path: '/mitarbeiter',
-    name: 'mitarbeiter',
-    component: Mitarbeiter
+    path: '/rwa',
+    name: 'rwa',
+    component: RWA
   },
   
   
