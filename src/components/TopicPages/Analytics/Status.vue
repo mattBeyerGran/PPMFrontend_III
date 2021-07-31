@@ -1,15 +1,6 @@
 <template>
 
-  <v-container>
-    
-    <v-container  fluid>  
-    <div align="left" class="mt-12">
-      <p class="display-1 ppmDarkTextColor--text"><v-icon color="ppmDarkTextColor">mdi-chart-sankey-variant mdi-36px</v-icon>
-      Planungs-Status</p> 
-    </div>
-  </v-container>
-
- 
+  
   <v-container>
      <GChart
           class="pt-5"
@@ -21,8 +12,7 @@
         />     
   </v-container>
     
-  </v-container>
-   
+  
 </template>
 
 <script>

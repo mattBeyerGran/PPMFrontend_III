@@ -3,24 +3,22 @@ import VueRouter from 'vue-router'
 
 
 /* ROOT */
-// import Home from '../components/Home.vue'
-import UnderConstruction from '../components/UnderConstruction.vue'
-import Dashboard from '../components/Analytics/Dashboard.vue'
-import Status from '../components/Analytics/Status.vue'
-import TopicPageTemplate from '../components/TopicPage/TopicPageTemplate.vue'
+import Dashboard from '../components/TopicPages/Analytics/Dashboard.vue'
+import Status from '../components/TopicPages/PlanungsStatus.vue'
+import TopicPageTemplate from '../components/TopicPages/TopicPageTemplate.vue'
 
 /* USER */
 import Profil from '../components/Auth/Profile.vue'
 import Signin from '../components/Auth/Signin.vue'
 
 /* TEILPLAN */
+
+import Geschaeft from '../components/TopicPages/Geschaeftsplanung.vue'
+
 import Patienten from '../components/Anwendungen/Patienten.vue'
 import Mitarbeiter from '../components/Anwendungen/Mitarbeiter.vue'
 import Visiten from '../components/Anwendungen/Visiten.vue'
 import Ertrag from '../components/Anwendungen/Ertragsplanung.vue'
-import NeueVisite from '../components/Anwendungen/NeueVisite.vue'
-import Geschaeft from '../components/Anwendungen/Geschaeftsplanung.vue'
-
 
 
 
@@ -45,11 +43,6 @@ const routes = [
     component: Dashboard
   },
   {
-    path: '/uc',
-    name: 'uc',
-    component: UnderConstruction
-  },
-  {
     path: '/topictemplate',
     name: 'topictemplate',
     component: TopicPageTemplate
@@ -60,11 +53,7 @@ const routes = [
     name: 'visiten',
     component: Visiten
   },
-  {
-    path: '/neueVisite',
-    name: 'neueVisite',
-    component: NeueVisite
-  },
+  
   {
     path: '/geschaeft',
     name: 'geschaeft',

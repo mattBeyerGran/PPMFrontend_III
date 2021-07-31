@@ -1,6 +1,7 @@
 <template>
    <div>
-     <v-navigation-drawer app temporary fixed v-model="sideNav" color="ppmDrawerColor">
+     <v-navigation-drawer v-model="sideNav" permanent fixed absolute color="ppmDrawerColor">
+       <!-- <v-navigation-drawer app temporary fixed v-model="sideNav" color="ppmDrawerColor"> -->
         <v-toolbar color="ppmTopBarColor" dark flat>
           <v-app-bar-nav-icon  @click="toggleSideNav" color="ppmDarkTextColor"></v-app-bar-nav-icon>
          <!--  Logo führt bei Anmeldung zum dashboard -->
