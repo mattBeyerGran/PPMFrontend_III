@@ -1,6 +1,6 @@
 <template>
   <!-- Fußzeile -->
-      <v-footer app v-if="this.user" color="ppmFooterColor" height="40" fixed class="mt-1 ppmFooterTextColor--text">
+      <v-footer app v-if="this.user" color="ppmFooterColor" absolute class="mt-1 ppmFooterTextColor--text">
         <p >
           &copy;{{ new Date().getFullYear() }} — msg global solutions</p>
         <v-spacer></v-spacer>
