@@ -13,7 +13,7 @@ import Signin from '../components/Auth/Signin.vue'
 /* TEILPLAN */
 
 import Geschaeft from '../components/TopicPages/Geschaeftsplanung.vue'
-import KreditAllgemein from '../components/TopicPages/PlanSheets/KreditAllgemein.vue'
+import KreditAllgemein from '../AppPages/PlanSheets/KreditAllgemein.vue'
 import Ertrag from '../components/TopicPages/Ertragsplanung.vue'
 import Kosten from '../components/TopicPages/Kostenplanung.vue'
 import RWA from '../components/TopicPages/RWAplanung.vue'

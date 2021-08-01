@@ -6,10 +6,10 @@
         <v-app-bar-nav-icon v-if="this.user" @click="toggleSideNav" color="ppmTopBarTextColor"></v-app-bar-nav-icon>
         <v-toolbar-title class="hidden-xs-only">
           <router-link v-if="this.user" to="/status" tag="span" style="cursor: pointer">
-              <img class="mt-3 ml-3" src="../assets/img/bayern-logo.png" alt="" width="120">
+              <img class="mt-3 ml-3" src="../../assets/img/bayern-logo.png" alt="" width="120">
           </router-link>
           <router-link v-else to="/login" tag="span" style="cursor: pointer">
-              <img class="mt-3 ml-3" src="../assets/img/bayern-logo.png" alt="" width="120">
+              <img class="mt-3 ml-3" src="../../assets/img/bayern-logo.png" alt="" width="120">
           </router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>

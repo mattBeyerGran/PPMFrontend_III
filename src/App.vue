@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import Navigation from  '@/components/TheNavigation'
-import FootBar from  '@/components/TheFootBar'
-import SideBar from  '@/components/TheSideBar'
+import Navigation from  '@/components/Navigation/TheNavigation'
+import FootBar from  '@/components/Navigation/TheFootBar'
+import SideBar from  '@/components/Navigation/TheSideBar'
 
 export default {
   name: "App",
