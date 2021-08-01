@@ -6,19 +6,14 @@
         <!-- fuer den linken Abstand -->
       </v-col>
        <v-col cols="11" class="leftmargin">
-        <div align="left"  class="topmargin display-1 ppmPlanTitleColor--text mt-8 pl-3">
-          <!-- class="display-1 ppmPlanTitleColor--text mt-8 pl-4"> -->
+        <div align="left"  class="topmargin display-1 ppmPlanTitleColor--text mt-8 pl-3">      
             {{title}}
         </div>
-    
-         <div align="left"  class=" header ppmPlanTitleColor--text pl-4">
-          <!-- class="display-1 ppmPlanTitleColor--text mt-8 pl-4"> -->
+         <div align="left"  class="ppmPlanTitleColor--text pl-4">
              {{subtitle}}
         </div>
-      </v-col>
-      
-    </v-row>
-  
+      </v-col>     
+    </v-row> 
   </v-container>
 </template>
 
@@ -36,19 +31,6 @@ export default {
       type: String,
       required: true
     }
-  },
-  data(){
-    return {
-
-    }
-  },
-  components: {
-    
-  },
-  
+  }
 }
 </script>
-
-<style>
-
-</style>

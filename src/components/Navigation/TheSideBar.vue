@@ -31,11 +31,11 @@
               <template v-slot:activator>
                 <v-list-item-title>Ertrag</v-list-item-title>
               </template>
-                  <v-list-item color="ppmPlanTitleColor" to="geschaeft">
+                  <v-list-item color="ppmPlanTitleColor" to="??????????????">
                       <v-list-item-icon></v-list-item-icon>
                       <v-list-item-title>Kredit allgemein</v-list-item-title>
                   </v-list-item>
-                  <v-list-item color="ppmPlanTitleColor" to="geschaeft">
+                  <v-list-item color="ppmPlanTitleColor" to="???????????????">
                       <v-list-item-icon></v-list-item-icon>
                       <v-list-item-title>Kredit allgemein</v-list-item-title>
                   </v-list-item>
@@ -45,11 +45,11 @@
               <template v-slot:activator>
                 <v-list-item-title>Kosten</v-list-item-title>
               </template>
-                  <v-list-item color="ppmPlanTitleColor" to="geschaeft">
+                  <v-list-item color="ppmPlanTitleColor" to="?????????">
                       <v-list-item-icon></v-list-item-icon>
                       <v-list-item-title>Kredit allgemein</v-list-item-title>
                   </v-list-item>
-                  <v-list-item color="ppmPlanTitleColor" to="geschaeft">
+                  <v-list-item color="ppmPlanTitleColor" to="????????????">
                       <v-list-item-icon></v-list-item-icon>
                       <v-list-item-title>Kredit allgemein</v-list-item-title>
                   </v-list-item>
@@ -81,20 +81,7 @@ export default {
   },
    computed: {
     ...mapGetters(['user']),
-        appItems(){
-      let appItems = [];
-      if (this.user){
-        appItems = [
-          
-          { title: "Geschäftsplanung", icon: "mdi-handshake-outline", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "geschaeft" },
-          { title: "Ertragsplanung", icon: "mdi-currency-eur", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "ertrag" },           
-          { title: "Kostenplanung", icon: "mdi-cash-multiple", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "kosten" },
-         
-          { title: "Topic-Page-Template", icon: "mdi-account-hard-hat", iconcolor: "ppmPlanTitleColor", color: "ppmPlanTitleColor", route: "topictemplate" }
-        ]
-      }
-      return appItems;
-    },
+        
     
     userItems(){
       let userItems= [];

@@ -87,11 +87,12 @@
       </v-simple-table>
        </v-col>
     </v-row> 
+
   </v-container>
 </template>
 
 <script>
-import PlanSheetHead from  '@/components/TopicPages/PlanSheets/PlanSheetHead'
+import PlanSheetHead from  '@/components/PlanSheet/PlanSheetHead'
 export default {
   name: "KreditAllgemein",
   components: {

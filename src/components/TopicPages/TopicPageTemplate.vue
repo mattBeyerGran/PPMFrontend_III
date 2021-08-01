@@ -1,44 +1,32 @@
 <template >
-  <v-container class="topmargin bottommargin">
-    <!-- Überschrift -->
-    <v-row no-gutters>
-      <v-col cols="1">
-        <!-- fuer den linken Abstand -->
-      </v-col>
-       <v-col cols="11" class="leftmargin">
-        <div align="left"  class="topmargin display-1 ppmPlanTitleColor--text mt-8 pl-3">
-          <!-- class="display-1 ppmPlanTitleColor--text mt-8 pl-4"> -->
-            Topic-Page-Bezeichnung 
-        </div>
+<div>
+  <PlanSheetHead title="Topic-Page-Bezeichnung" subtitle="Planjahr(e): 2022,  Planversion: 3, Planungslauf: 1 "/>
+    <v-container class="topmargin bottommargin">
     
-         <div align="left"  class=" header ppmPlanTitleColor--text pl-4">
-          <!-- class="display-1 ppmPlanTitleColor--text mt-8 pl-4"> -->
-            Planjahr(e): 2021,  Planversion: 3, Planungslauf: 1 
-        </div>
-      </v-col>   
-    </v-row>
-    <!-- Content -->
-    <v-row no-gutters  >
-        <v-col cols="1">
-        <!-- fuer den linken Abstand -->
-      </v-col>
-      <v-col cols="11" class="leftmargin">
-       <Geschaeftsplan/>  
-       </v-col>
-    </v-row> 
-    <v-row justify="center" class="topmargin">
-      <v-img
-       
-        max-width="450"
-        src="@/assets/under-construction.png"
-        >
-      </v-img>
-    </v-row>
-  </v-container>
+      <!-- Content -->
+      <v-row no-gutters  >
+          <v-col cols="1">
+          <!-- fuer den linken Abstand -->
+        </v-col>
+        <v-col cols="11" class="leftmargin">
+          
+        </v-col>
+      </v-row> 
+      <v-row justify="center" class="topmargin">
+        <v-img
+        
+          max-width="450"
+          src="@/assets/under-construction.png"
+          >
+        </v-img>
+      </v-row>
+    </v-container>
+</div>
+  
 </template>
 
 <script>
-import Geschaeftsplan from  '@/components/TopicPages/PlanSheets/Geschaeftsplan'
+import PlanSheetHead from  '@/components/PlanSheet/PlanSheetHead'
 
 export default {
   name: "App",
@@ -48,7 +36,7 @@ export default {
     }
   },
   components: {
-    Geschaeftsplan
+    PlanSheetHead
   },
   
 }
