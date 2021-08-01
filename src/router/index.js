@@ -3,8 +3,7 @@ import VueRouter from 'vue-router'
 
 
 /* ROOT */
-import Dashboard from '../components/TopicPages/Analytics/Dashboard.vue'
-import Status from '../components/TopicPages/PlanungsStatus.vue'
+import Status from '../AppPages/Analytics/PlanungsStatus.vue'
 import TopicPageTemplate from '../components/TopicPages/TopicPageTemplate.vue'
 
 /* USER */
@@ -14,6 +13,7 @@ import Signin from '../components/Auth/Signin.vue'
 /* TEILPLAN */
 
 import Geschaeft from '../components/TopicPages/Geschaeftsplanung.vue'
+import KreditAllgemein from '../components/TopicPages/PlanSheets/KreditAllgemein.vue'
 import Ertrag from '../components/TopicPages/Ertragsplanung.vue'
 import Kosten from '../components/TopicPages/Kostenplanung.vue'
 import RWA from '../components/TopicPages/RWAplanung.vue'
@@ -39,11 +39,6 @@ const routes = [
     component: Status
   },
   {
-    path: '/Dashboard',
-    name: 'Dashboard',
-    component: Dashboard
-  },
-  {
     path: '/topictemplate',
     name: 'topictemplate',
     component: TopicPageTemplate
@@ -52,6 +47,11 @@ const routes = [
   {
     path: '/geschaeft',
     name: 'geschaeft',
+    component: KreditAllgemein
+  },
+  {
+    path: '/kreditallgemein',
+    name: 'kreditallgemein',
     component: Geschaeft
   },
   {

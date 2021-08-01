@@ -1,23 +1,18 @@
 <template>
   <v-container>
-     <!-- Plan-Tab-Menu -->
-        <v-tabs
-            v-model="tab"
-            color="ppmLightTextColor" 
-            background-color="ppmTabsBGColor"
-            show-arrows
-            class="elevation-24"
-        >
-            <v-tabs-slider color="ppmSlider"></v-tabs-slider>
-
-            <v-tab href="#eins">Kredit allgemein</v-tab>
-            <v-tab href="#zwei">Hypotheken</v-tab>
-            <v-tab href="#drei">Spezial</v-tab>
-        </v-tabs>
+    <PlanSheetHead title="Geschäftsplanung - Kredit Allgemein" subtitle="Planjahr: 2022, Planversion: 3, Planungslauf: 1"/>
+     <v-row no-gutters  >
+        <v-col cols="1">
+        <!-- fuer den linken Abstand -->
+      </v-col>
+      <v-col cols="11" class="leftmargin">
+       <Geschaeftsplan/>  
+       </v-col>
+    </v-row> 
+    
 
         <!-- Tabelle -->
-        <v-tabs-items v-model="tab" class="mt-4">
-            <v-tab-item value="eins">
+
                <v-simple-table class="elevation-24">
                 <template v-slot:default>
                   <thead>
@@ -95,18 +90,7 @@
                   </tbody>
                 </template>  
       </v-simple-table>
-            </v-tab-item>
-            <v-tab-item value="zwei">
-                <v-card flat>
-                    <v-card-text>B</v-card-text>
-                </v-card>
-            </v-tab-item>
-             <v-tab-item value="drei">
-                <v-card flat>
-                    <v-card-text>C</v-card-text>
-                </v-card>
-            </v-tab-item>
-        </v-tabs-items>
+     
 <!--    
  </v-col>
         
@@ -115,8 +99,12 @@
 </template>
 
 <script>
+import PlanSheetHead from  '@/components/TopicPages/PlanSheets/PlanSheetHead'
 export default {
-  name: "Geschaeftsplan",
+  name: "KreditAllgemein",
+  components: {
+    PlanSheetHead
+  },
   data(){
       return{
       tab: "eins",

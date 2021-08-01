@@ -8,47 +8,42 @@
        <v-col cols="11" class="leftmargin">
         <div align="left"  class="topmargin display-1 ppmPlanTitleColor--text mt-8 pl-3">
           <!-- class="display-1 ppmPlanTitleColor--text mt-8 pl-4"> -->
-            Topic-Page-Bezeichnung 
+            {{title}}
         </div>
     
          <div align="left"  class=" header ppmPlanTitleColor--text pl-4">
           <!-- class="display-1 ppmPlanTitleColor--text mt-8 pl-4"> -->
-            Planjahr(e): 2021,  Planversion: 3, Planungslauf: 1 
+             {{subtitle}}
         </div>
-      </v-col>   
-    </v-row>
-    <!-- Content -->
-    <v-row no-gutters  >
-        <v-col cols="1">
-        <!-- fuer den linken Abstand -->
       </v-col>
-      <v-col cols="11" class="leftmargin">
-       <Geschaeftsplan/>  
-       </v-col>
-    </v-row> 
-    <v-row justify="center" class="topmargin">
-      <v-img
-       
-        max-width="450"
-        src="@/assets/under-construction.png"
-        >
-      </v-img>
+      
     </v-row>
+  
   </v-container>
 </template>
 
 <script>
-import Geschaeftsplan from  '@/components/TopicPages/PlanSheets/Geschaeftsplan'
+
 
 export default {
-  name: "App",
+  name: "PlanSheetHead",
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    subtitle: {
+      type: String,
+      required: true
+    }
+  },
   data(){
     return {
 
     }
   },
   components: {
-    Geschaeftsplan
+    
   },
   
 }
@@ -57,5 +52,3 @@ export default {
 <style>
 
 </style>
-
- 

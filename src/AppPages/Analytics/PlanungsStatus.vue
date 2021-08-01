@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import PlanungsStatus from  '@/components/TopicPages/Analytics/Status'
+import PlanungsStatus from  '@/AppPages/Analytics/Status'
 
 export default {
   name: "App",

@@ -1,20 +1,6 @@
 <template>
    <div>
-     <!-- <v-navigation-drawer v-if="this.user" v-model="sideNav" permanent fixed absolute color="ppmDrawerColor"> -->
-       <!-- <v-navigation-drawer app temporary fixed v-model="sideNav" color="ppmDrawerColor"> -->
-        <!-- <v-toolbar color="ppmTopBarColor" dark flat> -->
-          <!-- <v-app-bar-nav-icon  @click="toggleSideNav" color="ppmDarkTextColor"></v-app-bar-nav-icon> -->
-         <!--  Logo führt bei Anmeldung zum dashboard -->
-           <!-- <router-link v-if="this.user" to="/status" tag="span" style="cursor: pointer"><img class="mt-3 ml-3" src="../assets/img/bayern-logo.png" alt="" width="120"></router-link> -->
-          <!-- <router-link v-else to="/" tag="span" style="cursor: pointer"><img class="mt-3 ml-3" src="../assets/img/bayern-logo.png" alt="" width="120"></router-link> -->
-        <!-- </v-toolbar> -->
-
-        <!-- <v-divider></v-divider> -->
-
-      <!-- <SideBarLinks /> -->
-
-      <!-- </v-navigation-drawer> -->
-      <!-- Horizotal Navbar -->
+     <!-- Horizotal Navbar -->
       <v-app-bar clipped-left v-if="this.user" app fixed color="ppmTopBarColor">
         <!-- App Title -->
         <v-app-bar-nav-icon v-if="this.user" @click="toggleSideNav" color="ppmTopBarTextColor"></v-app-bar-nav-icon>
@@ -26,14 +12,12 @@
               <img class="mt-3 ml-3" src="../assets/img/bayern-logo.png" alt="" width="120">
           </router-link>
         </v-toolbar-title>
-
         <v-spacer></v-spacer>
-
         <!-- Title -->
         <div class="d-none d-lg-block display-1 font-weight-thin hidden-xs-only ppmTopBarTextColor--text" >{{ title }}</div>
         <v-spacer></v-spacer>
         <!-- navBarItems -->
-         <v-btn v-if="this.user" text to="/dashboard" color="ppmTopBarTextColor" >
+         <v-btn v-if="this.user" text to="/status" color="ppmTopBarTextColor" >
           <v-icon left>mdi-view-dashboard</v-icon>
         </v-btn>
          <v-btn v-if="this.user" text to="/profile" color="ppmTopBarTextColor" >
