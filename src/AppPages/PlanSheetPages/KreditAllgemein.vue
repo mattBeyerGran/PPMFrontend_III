@@ -6,12 +6,7 @@
         <!-- fuer den linken Abstand -->
       </v-col>
       <v-col cols="11" class="leftmargin">
-       <Geschaeftsplan/>  
-       </v-col>
-    </v-row> 
-    
-
-        <!-- Tabelle -->
+      <!-- Tabelle -->
 
                <v-simple-table class="elevation-24">
                 <template v-slot:default>
@@ -90,11 +85,8 @@
                   </tbody>
                 </template>  
       </v-simple-table>
-     
-<!--    
- </v-col>
-        
-    </v-row> -->
+       </v-col>
+    </v-row> 
   </v-container>
 </template>
 

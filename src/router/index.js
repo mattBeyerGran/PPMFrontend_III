@@ -10,13 +10,11 @@ import TopicPageTemplate from '../components/TopicPages/TopicPageTemplate.vue'
 import Profil from '../components/Auth/Profile.vue'
 import Signin from '../components/Auth/Signin.vue'
 
-/* TEILPLAN */
+/* Plan Sheets */
+import KreditAllgemein from '../AppPages/PlanSheetPages/KreditAllgemein.vue'
 
-import Geschaeft from '../components/TopicPages/Geschaeftsplanung.vue'
-import KreditAllgemein from '../AppPages/PlanSheets/KreditAllgemein.vue'
-import Ertrag from '../components/TopicPages/Ertragsplanung.vue'
-import Kosten from '../components/TopicPages/Kostenplanung.vue'
-import RWA from '../components/TopicPages/RWAplanung.vue'
+
+
 
 
 
@@ -45,29 +43,9 @@ const routes = [
   },
   //  PLAENE 
   {
-    path: '/geschaeft',
-    name: 'geschaeft',
-    component: KreditAllgemein
-  },
-  {
     path: '/kreditallgemein',
     name: 'kreditallgemein',
-    component: Geschaeft
-  },
-  {
-    path: '/ertrag',
-    name: 'ertrag',
-    component: Ertrag
-  },
-  {
-    path: '/kosten',
-    name: 'kosten',
-    component: Kosten
-  },
-  {
-    path: '/rwa',
-    name: 'rwa',
-    component: RWA
+    component: KreditAllgemein
   },
   
   

@@ -17,11 +17,11 @@
               <template v-slot:activator>
                 <v-list-item-title>Geschäft</v-list-item-title>
               </template>
-                  <v-list-item color="ppmPlanTitleColor" to="geschaeft">
+                  <v-list-item color="ppmPlanTitleColor" to="kreditallgemein">
                       <v-list-item-icon></v-list-item-icon>
                       <v-list-item-title>Kredit allgemein</v-list-item-title>
                   </v-list-item>
-                  <v-list-item color="ppmPlanTitleColor" to="geschaeft">
+                  <v-list-item color="ppmPlanTitleColor" to="hypotheken">
                       <v-list-item-icon></v-list-item-icon>
                       <v-list-item-title>Hypotheken</v-list-item-title>
                   </v-list-item>
