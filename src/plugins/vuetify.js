@@ -26,6 +26,7 @@ export default new Vuetify({
         ppmchartGreen: "#4CAF50",
         ppmchartYellow: "#FFEB3B",
         ppmSlider: "#F2B82B",
+        ppmParameterColor: "#AD1457",
         primary: "#0682BC",
         secondary: "#354A5F",
         button: "#2FA0E0",

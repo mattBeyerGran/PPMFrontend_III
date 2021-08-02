@@ -12,6 +12,8 @@ import Signin from '../components/Auth/Signin.vue'
 
 /* Plan Sheets */
 import KreditAllgemein from '../AppPages/PlanSheetPages/KreditAllgemein.vue'
+import Hypotheken from '../AppPages/PlanSheetPages/Hypotheken.vue'
+import Spezial from '../AppPages/PlanSheetPages/Spezial.vue'
 
 Vue.use(VueRouter)
 
@@ -37,6 +39,16 @@ const routes = [
     path: '/kreditallgemein',
     name: 'kreditallgemein',
     component: KreditAllgemein
+  },
+  {
+    path: '/hypotheken',
+    name: 'hypotheken',
+    component: Hypotheken
+  },
+  {
+    path: '/spezial',
+    name: 'spezial',
+    component: Spezial
   },
   
   

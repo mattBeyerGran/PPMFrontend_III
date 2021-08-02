@@ -1,5 +1,5 @@
 <template >
-  <v-container class="topmargin bottommargin">
+  <v-container class="topmargin">
     <!-- Überschrift -->
     <v-row no-gutters>
       <v-col cols="1">

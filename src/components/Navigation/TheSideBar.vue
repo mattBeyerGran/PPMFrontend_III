@@ -25,6 +25,10 @@
                       <v-list-item-icon></v-list-item-icon>
                       <v-list-item-title>Hypotheken</v-list-item-title>
                   </v-list-item>
+                   <v-list-item color="ppmPlanTitleColor" to="spezial">
+                      <v-list-item-icon></v-list-item-icon>
+                      <v-list-item-title>Spezial</v-list-item-title>
+                  </v-list-item>
           </v-list-group>
           
            <v-list-group prepend-icon="mdi-currency-eur">
