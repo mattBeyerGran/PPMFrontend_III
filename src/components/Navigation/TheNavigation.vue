@@ -1,17 +1,20 @@
 <template>
    <div>
-     <v-navigation-drawer app temporary fixed v-model="sideNav">
-        <v-toolbar color="secondary" dark flat>
-          <v-app-bar-nav-icon  @click="toggleSideNav"></v-app-bar-nav-icon>
+     <v-navigation-drawer app temporary fixed v-model="sideNav" color="ppmTabsBGColor">
+        <v-toolbar color="ppmTopBarColor" dark flat>
+          <v-app-bar-nav-icon  @click="toggleSideNav" color="ppmTopBarTextColor"></v-app-bar-nav-icon>
          <!--  Logo führt bei Anmeldung zum dashboard -->
-           <router-link v-if="this.user" to="/status" tag="span" style="cursor: pointer"><h1 class="title pl-3">CareCon</h1></router-link>
-          <router-link v-else to="/login" tag="span" style="cursor: pointer"><h1 class="title pl-3">CareCon</h1></router-link>
+            <router-link v-if="this.user" to="/status" tag="span" style="cursor: pointer">
+                <img class="mt-3 ml-3" src="../../assets/img/bayern-logo.png" alt="" width="120">
+            </router-link>
+            <router-link v-else to="/login" tag="span" style="cursor: pointer">
+                <img class="mt-3 ml-3" src="../../assets/img/bayern-logo.png" alt="" width="120">
+            </router-link>
         </v-toolbar>
 
         <v-divider></v-divider>
 
       <SideBarLinks />
-
       </v-navigation-drawer>
      <!-- Horizotal Navbar -->
       <v-app-bar clipped-left v-if="this.user" app fixed color="ppmTopBarColor">

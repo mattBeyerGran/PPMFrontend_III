@@ -1,5 +1,5 @@
 <template>
-        <v-list shaped>
+        <v-list shaped >
            <v-header v-if="this.user"><strong><span class="ppmDarkTextColor--text ml-4">Planungsthemen</span></strong></v-header>
            <v-list-group prepend-icon="mdi-handshake-outline">
               <template v-slot:activator>
@@ -66,41 +66,32 @@ import { mapGetters } from 'vuex';
 
 export default {
    name: "SideBarLinks",
-  //   props: {
-  //   sideNav: {
-  //     type: Boolean,
-  //     required: true
-  //   }
-  // },
     data(){
       return {
-      // sideNav: false
+     
       }
   },
    computed: {
     ...mapGetters(['user']),
         
     
-    userItems(){
-      let userItems= [];
-      if (this.user){
-        userItems = [
-          { title: "Nachrichten", icon: "mdi-mailbox", route: "uc" },      
-          { title: "Profil", icon: "mdi-account-circle", route: "profile" }
+    // userItems(){
+    //   let userItems= [];
+    //   if (this.user){
+    //     userItems = [
+    //       { title: "Nachrichten", icon: "mdi-mailbox", route: "uc" },      
+    //       { title: "Profil", icon: "mdi-account-circle", route: "profile" }
           
-        ]
-      }
-      return userItems;
-    }
+    //     ]
+    //   }
+    //   return userItems;
+    // }
     
   },
   methods: {
     handleSignoutUser(){
       this.$store.dispatch('signoutUser');
-    },
-    // toggleSideNav(){
-    //   this.sideNav = !this.sideNav;
-    // }
+    }
   }
 }
 </script>

@@ -1,7 +1,6 @@
 <template>
 <v-app  id="Hintergrund">
         <Navigation title="BayernPS - Integrierte Planung" />                          
-        <!-- <SideBar /> -->
         <main  >
           <v-container  >
             <router-view/>     
