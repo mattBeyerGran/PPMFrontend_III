@@ -1,14 +1,13 @@
 <template >
-  <v-container class="bottommargin">
-   
-        <template>
+  <v-container class="bottommargin">   
+      
           <v-toolbar 
             flat
             color="ppmTabsBGColor" 
             class="mb-4"
             rounded="lg"
           >
-            <v-toolbar-title class="ppmLightTextColor--text">Allgemeine Kredite - Bestandsveränderung</v-toolbar-title>
+            <v-toolbar-title class="ppmLightTextColor--text">Hypotheken-Bestandsveränderung</v-toolbar-title>
              <v-spacer></v-spacer>
                  <div class="text-center">
                 <v-dialog
@@ -74,8 +73,11 @@
                 </v-dialog>
               </div>
           </v-toolbar>
-            
-        <v-simple-table >
+   <!-- #######################################    -->
+         <template>
+    
+          <v-sheet width="2000">
+        <v-simple-table>
           <template v-slot:default >
             <thead>
               <tr>
@@ -142,35 +144,24 @@
               </tr>
               <tr>
                 <td><v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-head-question-outline</v-icon></v-btn>Zugang</td>
-                <td><v-text-field
-                        background-color="#343434"
-                        height=""
-                        outlined
-                        dense
-                    ></v-text-field></td>
-                <td><v-input
-          :messages="['Messages']"
-          append-icon="mdi-close"
-          prepend-icon="mdi-phone"
-        >
-          Default Slot
-        </v-input></td>
-                <td>{{ PlanElement[1].mar }}</td>
-                <td>{{ PlanElement[1].apr }}</td>
-                <td>{{ PlanElement[1].mai }}</td>
-                <td>{{ PlanElement[1].jun }}</td>
-                <td>{{ PlanElement[1].jul }}</td>
-                <td>{{ PlanElement[1].aug }}</td>
-                <td>{{ PlanElement[1].sep }}</td>
-                <td>{{ PlanElement[1].okt }}</td>
-                <td>{{ PlanElement[1].nov }}</td>
-                <td>{{ PlanElement[1].dez }}</td>
+                <td><v-text-field class="mt-8" value="value" v-model="zugang01" background-color="ppmElementGreen" color="red" filled dense></v-text-field></td>
+                <td><v-text-field class="mt-8" value="value" v-model="zugang02" background-color="ppmElementYellow" color="red" solo dense></v-text-field></td>
+                <td><v-text-field class="mt-8" value="value" v-model="zugang02" background-color="ppmElementRed" color="red" solo dense></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
+                <td><v-text-field value="value" v-model="zugang01"></v-text-field></td>
                 <td><v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-flag-checkered</v-icon></v-btn>
                      <v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-account-multiple-check</v-icon></v-btn></td>
               </tr>
               <tr>
                 <td><v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-head-question-outline</v-icon></v-btn>Abgang</td>
-                <td>{{ PlanElement[1].jan }}</td>
+                <td><div class="red--text">{{ PlanElement[1].jan }}</div></td>
                 <td>{{ PlanElement[1].feb }}</td>
                 <td>{{ PlanElement[1].mar }}</td>
                 <td>{{ PlanElement[1].apr }}</td>
@@ -247,7 +238,11 @@
           </template>
         </v-simple-table>
 
+          </v-sheet>  
+
+
       </template>
+          
   </v-container>
 </template>
 
@@ -265,6 +260,9 @@
           }
           
         ],
+        zugangxx: [{eins: 123, zwei:123}],
+        zugang01: 250,zugang02: 340,
+        
         PlanElement: [
           {
             element: 'Anfangsbestand',

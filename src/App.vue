@@ -1,7 +1,7 @@
 <template>
 <v-app  id="Hintergrund">
         <Navigation title="BayernPS - Integrierte Planung" />                          
-        <SideBar />
+        <!-- <SideBar /> -->
         <main  >
           <v-container  >
             <router-view/>     
@@ -14,7 +14,7 @@
 <script>
 import Navigation from  '@/components/Navigation/TheNavigation'
 import FootBar from  '@/components/Navigation/TheFootBar'
-import SideBar from  '@/components/Navigation/TheSideBar'
+// import SideBar from  '@/components/Navigation/TheSideBar'
 
 export default {
   name: "App",
@@ -26,7 +26,7 @@ export default {
   components: {
     Navigation,
     FootBar,
-    SideBar
+    // SideBar
   },
   
 }

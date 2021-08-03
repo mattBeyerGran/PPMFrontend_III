@@ -1,19 +1,7 @@
 <template>
-  <!-- <v-navigation-drawer v-if="this.user" temporary fixed app clipped v-model="sideNav" height="100vh"  color="ppmDrawerColor"> -->
-    <v-navigation-drawer v-if="this.user" app clipped height="100vh" permanent color="ppmDrawerColor">
         <v-list shaped>
            <v-header v-if="this.user"><strong><span class="ppmDarkTextColor--text ml-4">Planungsthemen</span></strong></v-header>
-           <!-- <v-list-item
-            color="ppmPlanTitleColor"
-            to="status"
-           >
-              <v-list-item-icon>
-                  <v-icon>mdi-chart-sankey-variant</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Status</v-list-item-title>
-          </v-list-item> -->
-
-          <v-list-group prepend-icon="mdi-handshake-outline">
+           <v-list-group prepend-icon="mdi-handshake-outline">
               <template v-slot:activator>
                 <v-list-item-title>Geschäft</v-list-item-title>
               </template>
@@ -70,17 +58,23 @@
           </v-list-item>
           
         </v-list>
-    </v-navigation-drawer >
+    
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 
 export default {
-   name: "TheSideBar",
+   name: "SideBarLinks",
+  //   props: {
+  //   sideNav: {
+  //     type: Boolean,
+  //     required: true
+  //   }
+  // },
     data(){
       return {
-      sideNav: false
+      // sideNav: false
       }
   },
    computed: {
@@ -104,6 +98,9 @@ export default {
     handleSignoutUser(){
       this.$store.dispatch('signoutUser');
     },
+    // toggleSideNav(){
+    //   this.sideNav = !this.sideNav;
+    // }
   }
 }
 </script>

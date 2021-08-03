@@ -1,5 +1,18 @@
 <template>
    <div>
+     <v-navigation-drawer app temporary fixed v-model="sideNav">
+        <v-toolbar color="secondary" dark flat>
+          <v-app-bar-nav-icon  @click="toggleSideNav"></v-app-bar-nav-icon>
+         <!--  Logo führt bei Anmeldung zum dashboard -->
+           <router-link v-if="this.user" to="/status" tag="span" style="cursor: pointer"><h1 class="title pl-3">CareCon</h1></router-link>
+          <router-link v-else to="/login" tag="span" style="cursor: pointer"><h1 class="title pl-3">CareCon</h1></router-link>
+        </v-toolbar>
+
+        <v-divider></v-divider>
+
+      <SideBarLinks />
+
+      </v-navigation-drawer>
      <!-- Horizotal Navbar -->
       <v-app-bar clipped-left v-if="this.user" app fixed color="ppmTopBarColor">
         <!-- App Title -->
@@ -36,7 +49,7 @@
 </template>
 
 <script>
-// import SideBarLinks from  '@/components/TheSideBarLinks'
+import SideBarLinks from  '@/components/Navigation/SideBarLinks'
 import { mapGetters } from 'vuex';
 // import TheSideBar from './TheSideBar.vue';
 
@@ -56,7 +69,7 @@ export default {
   },
   components: {
     // TheSideBar,
-    // SideBarLinks
+    SideBarLinks
   },
   computed: {
     ...mapGetters(['user']),
