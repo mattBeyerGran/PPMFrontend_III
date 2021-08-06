@@ -11,6 +11,7 @@
             <v-toolbar-title class="ppmLightTextColor--text">Spezial-Bestandsveränderung</v-toolbar-title>
              <v-spacer></v-spacer>
                  <div class="text-center">
+
                 <v-dialog
                   v-model="dialog"
                   width="300"
@@ -82,12 +83,13 @@
                 <th class="ml-8 text-start ppmDarkTextColor--text subtitle-1">
                     Plan-Element
                   </th>
-                  <th class="text-center ppmDarkTextColor--text subtitle-1">
-                    Jan
-                  </th>
-                      <th class="text-center ppmDarkTextColor--text subtitle-1">
+                <th class="text-center ppmDarkTextColor--text">
+                    <v-btn icon color="ppmDarkTextColor">Jan</v-btn> 
+                </th>
+                    <!-- <th class="text-center ppmDarkTextColor--text subtitle-1"> -->
+                 <th class="text-center ppmDarkTextColor--text subtitle-1">
                     Feb
-                  </th>
+                </th>
                       <th class="text-center ppmDarkTextColor--text subtitle-1">
                     Mar
                   </th>
@@ -124,9 +126,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><v-btn text><v-icon dark color="delete" @click="editItem(item)">mdi-calculator-variant</v-icon></v-btn>Anfangsbestand</td>
-                <td>{{ PlanElement[0].jan }}</td>
+              <tr class="ppmElementGreen">
+                <td><v-btn text v-show="true"><v-icon  dark color="delete" @click="editItem(item)">mdi-calculator-variant</v-icon></v-btn>Anfangsbestand</td>
+                <td class="red--text yellow">{{ PlanElement[0].jan }}</td>
                 <td>{{ PlanElement[0].feb }}</td>
                 <td>{{ PlanElement[0].mar }}</td>
                 <td>{{ PlanElement[0].apr }}</td>
@@ -140,8 +142,9 @@
                 <td>{{ PlanElement[0].dez }}</td>
                 <td></td>
               </tr>
+          
               <tr>
-                <td><v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-head-question-outline</v-icon></v-btn>Zugang</td>
+                <td><v-btn  icon><v-icon dark color="edit" @click="editItem(item)" class="br-8">mdi-head-question-outline</v-icon></v-btn>Zugang</td>
                 <td>{{ PlanElement[1].jan }}</td>
                 <td>{{ PlanElement[1].feb }}</td>
                 <td>{{ PlanElement[1].mar }}</td>
@@ -154,8 +157,8 @@
                 <td>{{ PlanElement[1].okt }}</td>
                 <td>{{ PlanElement[1].nov }}</td>
                 <td>{{ PlanElement[1].dez }}</td>
-                <td><v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-flag-checkered</v-icon></v-btn>
-                     <v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-account-multiple-check</v-icon></v-btn></td>
+                <td><v-icon dark color="edit" @click="editItem(item)">mdi-flag-checkered</v-icon>
+                     <v-icon dark color="edit" @click="editItem(item)">mdi-account-multiple-check</v-icon></td>
               </tr>
               <tr>
                 <td><v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-head-question-outline</v-icon></v-btn>Abgang</td>
@@ -176,7 +179,7 @@
               </tr>
               <tr>
                 <td><v-btn text><v-icon dark color="delete" @click="editItem(item)">mdi-calculator-variant</v-icon></v-btn>Endbestand</td>
-                <td>{{ PlanElement[1].jan }}</td>
+                <td><div v-text="red">{{ PlanElement[1].jan }}</div></td>
                 <td>{{ PlanElement[1].feb }}</td>
                 <td>{{ PlanElement[1].mar }}</td>
                 <td>{{ PlanElement[1].apr }}</td>
@@ -241,9 +244,14 @@
 </template>
 
 <script>
+
   export default {
+    components: {
+     
+    },
     data () {
       return {
+        show1: true,
         dialog: false,
         LocalParameter: [
           {
