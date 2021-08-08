@@ -3,7 +3,7 @@
      <v-navigation-drawer app temporary fixed v-model="sideNav" color="ppmTabsBGColor">
         <v-toolbar color="ppmTopBarColor" dark flat>
           <v-app-bar-nav-icon  @click="toggleSideNav" color="ppmTopBarTextColor"></v-app-bar-nav-icon>
-         <!--  Logo führt bei Anmeldung zum dashboard -->
+         <!--  Logo führt bei Anmeldung zum status -->
             <router-link v-if="this.user" to="/status" tag="span" style="cursor: pointer">
                 <img class="mt-3 ml-3" src="../../assets/img/bayern-logo.png" alt="" width="120">
             </router-link>

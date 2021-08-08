@@ -23,28 +23,14 @@
               <template v-slot:activator>
                 <v-list-item-title>Ertrag</v-list-item-title>
               </template>
-                  <v-list-item color="ppmPlanTitleColor" to="??????????????">
-                      <v-list-item-icon></v-list-item-icon>
-                      <v-list-item-title>Kredit allgemein</v-list-item-title>
-                  </v-list-item>
-                  <v-list-item color="ppmPlanTitleColor" to="???????????????">
-                      <v-list-item-icon></v-list-item-icon>
-                      <v-list-item-title>Kredit allgemein</v-list-item-title>
-                  </v-list-item>
+                 <!-- hier weitere Links eintragen -->
             </v-list-group>
 
             <v-list-group prepend-icon="mdi-cash-multiple">
               <template v-slot:activator>
                 <v-list-item-title>Kosten</v-list-item-title>
               </template>
-                  <v-list-item color="ppmPlanTitleColor" to="?????????">
-                      <v-list-item-icon></v-list-item-icon>
-                      <v-list-item-title>Kredit allgemein</v-list-item-title>
-                  </v-list-item>
-                  <v-list-item color="ppmPlanTitleColor" to="????????????">
-                      <v-list-item-icon></v-list-item-icon>
-                      <v-list-item-title>Kredit allgemein</v-list-item-title>
-                  </v-list-item>
+                 <!-- hier weitere Links eintragen -->
             </v-list-group>
 
             <v-list-item

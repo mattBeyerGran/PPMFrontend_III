@@ -20,9 +20,9 @@
         
         <td class="ppmTabsBGColor">
             <!-- Item[{{PlanItem}}] -->
-            <v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-information-outline</v-icon></v-btn>
-            <v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-flag-checkered</v-icon></v-btn>
-            <v-btn text><v-icon dark color="edit" @click="editItem(item)">mdi-account-multiple-check</v-icon></v-btn> 
+            <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-information-outline</v-icon></v-btn>
+            <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-flag-checkered</v-icon></v-btn>
+            <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-account-multiple-check</v-icon></v-btn> 
         </td>
     </tr>
 
@@ -31,13 +31,9 @@
 </template>
 
 <script>
-// import GoalRow from  '@/components/PlanSheet/GoalRow'
 
 export default {
   name: "PlanRow",
-  components: {
-    //  GoalRow
-  },
   props: {
       PlanItem: { type: Number, required: true },
       PlanItemName: { type: String, required: true },

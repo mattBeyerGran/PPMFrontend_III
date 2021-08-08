@@ -1,7 +1,7 @@
 <template>
   
   <v-container>
-    <div class="white">Text</div>
+    
      <GChart
           class="pt-5"
           :settings="{ packages: ['corechart', 'gantt', 'table'] }"

@@ -1,21 +1,38 @@
+// **********************************************
+// *  PlanSheet: PS03                           *
+// *  Module: "Spezial.js"                      *
+// **********************************************
 <template>
   <v-container>
-    <PlanSheetHead title="Geschäftsplanung - Spezial" subtitle="Planjahr: 2022, Planversion: 3, Planungslauf: 1"/>
-     <!-- <SpezialTable/> -->
-     <SpezialTable3/>
+    <PlanHead 
+        title="Geschäftsplanung - Spezialkredite" 
+        subtitle="Planjahr: 2022, Planversion: 3, Planungslauf: 1"
+        v-bind:plannerName=" plName "
+        v-bind:plannerRole=" plRole "
+        /> 
+     <PlanSheetToolBar ToolBarTitle="Spezielle Kredite - Bestandsveränderung" />   
+     <SpezialTable/>
   </v-container>
 </template>
 
 <script>
-import PlanSheetHead from  '@/components/PlanSheet/PlanSheetHead'
-// import SpezialTable from  '@/AppPages/PlanSheetPages/PlanSheetTables/SpezialTable'
-import SpezialTable3 from  '@/AppPages/PlanSheetPages/PlanSheetTables/SpezialTable3'
+import PlanHead from  '@/components/PlanSheet/PlanHead'
+import PlanSheetToolBar from  '@/components/PlanSheet/PlanSheetToolBar'
+import SpezialTable from  '@/AppPages/PlanSheetPages/PlanSheetTables/SpezialTable'
 export default {
   name: "Spezial",
   components: {
-    PlanSheetHead,
-    // SpezialTable,
-    SpezialTable3
+    PlanHead,
+    PlanSheetToolBar,
+    SpezialTable
+  },
+  computed: {
+    plName() {
+      return this.$store.getters.plannerName;
+    },
+    plRole() {
+      return this.$store.getters.plannerRole;
+    }
   }
 
 }

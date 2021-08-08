@@ -4,7 +4,6 @@ import VueRouter from 'vue-router'
 
 /* ROOT */
 import Status from '../AppPages/Analytics/PlanungsStatus.vue'
-import TopicPageTemplate from '../components/TopicPages/TopicPageTemplate.vue'
 
 /* USER */
 import Profil from '../components/Auth/Profile.vue'
@@ -28,11 +27,6 @@ const routes = [
     path: '/status',
     name: 'status',
     component: Status
-  },
-  {
-    path: '/topictemplate',
-    name: 'topictemplate',
-    component: TopicPageTemplate
   },
   //  PLAENE 
   {

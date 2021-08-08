@@ -2,12 +2,12 @@
 
 <v-container > 
   <!-- Signin Form -->
-  <v-card
+  <v-card mb-12
    color="red">
  <v-container text-center class="form">
           <v-layout>
-            <v-flex mt-12 xs12 sm6 offset-sm3>
-              <v-card color="white" width="400px" elevation="24">
+            <v-flex mt-2 xs12 sm6 offset-sm3>
+              <v-card mp-6 color="white" width="400px" elevation="24">
                 <v-container>
                   <v-form @submit.prevent="handleLoginUser"
                   >
@@ -24,7 +24,7 @@
                       </v-flex>
                     </v-layout>
 
-                    <v-layout>
+                    <v-layout mb-2>
                       <v-flex xs12>
                         <v-text-field 
                           v-model="password"
@@ -37,7 +37,7 @@
                       </v-flex>
                     </v-layout>
 
-                    <v-layout row>
+                    <v-layout mb-4 row>
                       <v-flex xs12>
                         <v-btn color="button" type="submit">Login</v-btn>
                       </v-flex>
