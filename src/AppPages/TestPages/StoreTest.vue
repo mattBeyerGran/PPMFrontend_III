@@ -6,11 +6,12 @@
             depressed
             color="primary"
             class="mt-6"
-            @click=toggleGoal           >
+            @click="toggleGoal"          
+            >
             Toggle Goal
             </v-btn>
         </div>
-        <div class="white--text display-1">{{isActive1}}</div>
+        <div class="white--text display-1">{{ isActive1 }}</div>
         <div>
             <v-btn
             depressed
@@ -21,25 +22,24 @@
             Toggle Match
             </v-btn>
         </div>
-        <div class="white--text display-1">{{isActive2}}</div>
+        <div class="white--text display-1">{{ isActive2 }}</div>
     </div>
 </template>
 
 <script>
     import { mapGetters } from 'vuex';
     // import { mapState } from 'vuex';
-    // import { mapMutations } from 'vuex';
+    import { mapActions } from 'vuex';
     import * as types from '../../store/types';
 
     
     export default {
         name: "StoreTest",
         methods: {
-            
-            toggleGoal () {
-                this.$store.commit(this.toggleGoal);
-            }
-            
+            ...mapActions({
+                toggleGoal: types.PL01PST01ROW04_TOGGLE_ACTIVE,             
+                toggleMatch: types.PL01PST01ROW05_TOGGLE_ACTIVE
+            })
             
         },
         computed: {

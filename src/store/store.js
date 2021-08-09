@@ -20,7 +20,8 @@ export default new Vuex.Store({
   state: {
     user: null,
     plannerName01: "Bernd von Staa",
-    plannerRole01: "Country Manager"
+    plannerRole01: "Country Manager",
+    
     
    },
 
@@ -34,6 +35,12 @@ export default new Vuex.Store({
     plannerRole: state => {
       return state.plannerRole01;
     }
+    // PL01PST01ROW04_ACTIVE: state => {
+    //   return state.PL01_PST01RowActive[0];
+    // },
+    // PL01PST01ROW05_ACTIVE: state => {
+    //     return state.PL01_PST01RowActive[1];
+    // }
   },
   mutations: {
    
@@ -45,7 +52,13 @@ export default new Vuex.Store({
     },
     setLoading: (state, payload) => {
       state.loading = payload;
-    },
+    }
+    // toggleGoal: state => {
+    //     state.PL01_PST01RowActive[0] = !state.PL01_PST01RowActive[0];
+    // },
+    // toggleMatch: state => {
+    //     state.PL01_PST01RowActive[1] = !state.PL01_PST01RowActive[1];
+    // }
   },
   actions: {
     me: ({ commit }) => {

@@ -23,8 +23,8 @@
         <td class="ppmTabsBGColor">
             <!-- Item[{{PlanItem}}] -->
             <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="editItem(item)">mdi-pencil</v-icon>
-            <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="activateGoal(0)">mdi-flag-checkered</v-icon>
-            <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="activateMatch(1)">mdi-account-multiple-check</v-icon> 
+            <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="activateGoal">mdi-flag-checkered</v-icon>
+            <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="activateMatch">mdi-account-multiple-check</v-icon> 
         </td>
     </tr>
 

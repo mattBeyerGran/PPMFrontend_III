@@ -31,42 +31,18 @@
               <CalcRow CalcItem=1 v-bind:CalcItemName=TextCalc02 v-bind:CalcItemDesc=DescCalcs01 />   
               <DividerRow/>
               <TitleRow/> 
-              <PlanRowExtern v-show="isActive2" v-bind:PlanItemExtern=PlanItems[0].ItemId v-bind:PlanItemExternName=PlanItems[0].PlanText />
-              <GlobalRow v-show="isActive2" v-bind:PlanItemExtern=PlanItems[0].ItemId v-bind:PlanItemExternName=PlanItems[0].PlanText />
+              <PlanRowExtern v-bind:PlanItemExtern=PlanItems[0].ItemId v-bind:PlanItemExternName=PlanItems[0].PlanText />
+              <GlobalRow v-bind:PlanItemExtern=PlanItems[0].ItemId v-bind:PlanItemExternName=PlanItems[0].PlanText />
               <EmptyRow/>             
             </tbody>         
           </template>
         </v-simple-table>
-           <div>
-        <div class="testmargin white--text display-3">Action and Mutation Test</div>
-        <div>
-            <v-btn
-            depressed
-            color="primary"
-            class="mt-6"
-            @click="toggleGoal"
-            >
-            Toggle Goal
-            </v-btn>
-        </div>
-        <div>
-            <v-btn
-            depressed
-            color="primary"
-            class="mt-6"
-            @click="toggleMatch"
-            >
-            Toggle Match
-            </v-btn>
-        </div>
         
-    </div>
   </v-container>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import { mapMutations } from 'vuex';
 import { mapActions } from 'vuex';
 
 
@@ -102,10 +78,6 @@ import DividerRow from  '@/components/PlanSheet/DividerRow'
     })
     },
     methods: {
-      ...mapMutations([
-          'toggleGoal',
-          'toggleMatch'
-      ]),
       ...mapActions({
           toggleGoal: types.PL01PST01ROW04_TOGGLE_ACTIVE,
           toggleMatch: types.PL01PST01ROW05_TOGGLE_ACTIVE
