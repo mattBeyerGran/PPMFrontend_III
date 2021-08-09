@@ -28,7 +28,7 @@
 
 
 export default {
-  name: "PlanSheetHead",
+  name: "PlanHead",
   props: {
     title: {
       type: String,

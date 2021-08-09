@@ -1,6 +1,6 @@
 <template >
  
-    <tr v-if="isActive">
+    <tr>
          
         <td class="text-start ppmDarkTextColor--text subtitle-1 ppmTabsBGColor">
           <v-icon dark color="ppmPlanElementColor" class="mr-2" @click="editItem(item)">mdi-head-question-outline</v-icon>
@@ -39,10 +39,10 @@ import * as types from '../../store/types';
 export default {
   name: "PlanRow",
   props: {
-      PlanItem: { type: Number, required: true },
-      PlanItemName: { type: String, required: true },
-      goal: { type: Number, required: true},
-      match: { type: Number, required: true},
+      PlanItem: { type: String, required: false },
+      PlanItemName: { type: String, required: false },
+      goal: { type: String, required: true},
+      match: { type: String, required: true},
   },
   methods: {
       ...mapActions({
@@ -52,8 +52,6 @@ export default {
   },
   data () {
       return {
-          isActive: true,
-          isActive2: true,
           PlanElement: [
           {
             Periode01: 159,

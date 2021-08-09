@@ -1,6 +1,6 @@
 <template >
  
-    <tr v-if="isActive">
+    <tr>
         
         <td class="text-start pl-12  ppmDarkTextColor--text ppmTabsBGColor">
           <v-icon dark color="ppmPlanElementColor" class="mr-2" @click="editItem(item)">mdi-account-multiple-check</v-icon>
@@ -21,9 +21,7 @@
         <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode12 }}</td>
         
         <td class="ppmTabsBGColor">
-            <!-- Item[{{PlanItem}}] -->
-            <!-- <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-information-outline</v-icon></v-btn> -->
-            
+           
         </td>
     </tr>
 
@@ -36,13 +34,11 @@
 export default {
   name: "PlanRow",
   props: {
-      PlanItem: { type: Number, required: true },
-      PlanItemName: { type: String, required: true },
+      PlanItem: { type: String, required: false },
+      PlanItemName: { type: String, required: false },
   },
   data () {
       return {
-          isActive: true,
-          isActive2: true,
           PlanElement: [
           {
             Periode01: 259,

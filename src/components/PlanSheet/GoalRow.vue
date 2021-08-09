@@ -36,8 +36,8 @@
 export default {
   name: "PlanRow",
   props: {
-      PlanItem: { type: Number, requippmNumberRed: true },
-      PlanItemName: { type: String, requippmNumberRed: true },
+      PlanItem: { type: String, required: false },
+      PlanItemName: { type: String, required: false },
   },
   data () {
       return {

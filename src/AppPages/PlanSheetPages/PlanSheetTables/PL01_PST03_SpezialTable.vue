@@ -1,6 +1,6 @@
 <template >
   <v-container class="bottommargin">
-        <v-simple-table >
+        <!-- <v-simple-table >
           <template v-slot:default >
             <thead>
               <tr  class="ppmDarkTextColor">
@@ -21,58 +21,58 @@
               </tr>
             </thead>
             <tbody>      
-              <PlanRow v-show="isActive" v-bind:PlanItem=PlanItems[0].ItemId v-bind:PlanItemName=PlanItems[0].PlanText />
-              <CalcRow CalcItem=1 v-bind:CalcItemName=TextCalc01 v-bind:CalcItemDesc=DescCalcs01 />   
+              <PlanRow PlanItem="12" v-bind:PlanItemName=PlanItems[0].PlanText />
+              <CalcRow CalcItem="1" v-bind:CalcItemName=TextCalc01 v-bind:CalcItemDesc=DescCalcs01 />   
               <EmptyRow/>             
             </tbody>
             
           </template>
-        </v-simple-table>
+        </v-simple-table> -->
   </v-container>
 </template>
 
 <script>
-import PlanRow from  '@/components/PlanSheet/PlanRow'
-import CalcRow from  '@/components/PlanSheet/CalcRow'
-import EmptyRow from  '@/components/PlanSheet/EmptyRow'
+// import PlanRow from  '@/components/PlanSheet/PlanRow'
+// import CalcRow from  '@/components/PlanSheet/CalcRow'
+// import EmptyRow from  '@/components/PlanSheet/EmptyRow'
 
 
-  export default {
-    components: {
-      PlanRow,
-      CalcRow,
-      EmptyRow
-    },
+//   export default {
+//     components: {
+//       PlanRow,
+//       CalcRow,
+//       EmptyRow
+//     },
 
-    data () {
-      return {
-        isActive: true,
+//     data () {
+//       return {
+//         isActive: true,
         
-        dialog: false,
+//         dialog: false,
         
         
-        TextCalc01: "Test CalcText",
-        DescCalcs01: "Test Calculation",
+//         TextCalc01: "Test CalcText",
+//         DescCalcs01: "Test Calculation",
        
         
-        // wert11: 25,
-        LocalParameter: [
-          {
-            Vorjahresbestand: 25000
-          },
-          {
-            Mehrwertsteuer: 0.19
-          }
+//         // wert11: 25,
+//         LocalParameter: [
+//           {
+//             Vorjahresbestand: 25000
+//           },
+//           {
+//             Mehrwertsteuer: 0.19
+//           }
           
-        ],
-        PlanItems: [
-          {
-            ItemId: 27,
-            PlanText: "Test PlanText"
-          }
-        ]
-      }
-    }
+//         ],
+//         PlanItems: [
+//           {
+//             ItemId: "27",
+//             PlanText: "Test PlanText"
+//           }
+//         ]
+//       }
+//     }
 
-  }
+//   }
 </script>

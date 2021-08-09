@@ -1,5 +1,5 @@
 <template >
-     <tr  v-if=isActive class="ppmTabsBGColor" >
+     <tr class="ppmTabsBGColor" >
          
         <td class="text-start ppmDarkTextColor--text subtitle-1 ppmTabsBGColor">
           <v-icon dark color="ppmParameterColor" class="mr-2" @click="editItem(item)">mdi-calculator-variant</v-icon>
@@ -32,13 +32,12 @@
 export default {
   name: "CalsRow",
   props: {
-      CalcItem: { type: Number, required: true },
-      CalcItemName: { type: String, required: true },
-      CalcItemDesc: { type: String, required: true },
+      CalcItem: { type: String, required: false },
+      CalcItemName: { type: String, required: false },
+      CalcItemDesc: { type: String, required: false },
   },
   data () {
       return {
-          isActive: true,
           PlanElement: [
           {
             element: 'Anfangsbestand',

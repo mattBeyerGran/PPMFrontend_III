@@ -1,6 +1,6 @@
 <template>
         <v-list shaped >
-           <v-header v-if="this.user"><strong><span class="ppmDarkTextColor--text ml-4">Planungsthemen</span></strong></v-header>
+           <div v-if="this.user"><strong><span class="ppmDarkTextColor--text ml-4">Planungsthemen</span></strong></div>
            <v-list-group prepend-icon="mdi-handshake-outline">
               <template v-slot:activator>
                 <v-list-item-title>Geschäft</v-list-item-title>

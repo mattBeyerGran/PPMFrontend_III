@@ -55,12 +55,7 @@ const routes = [
     name: 'profile',
     component: Profil
   },
-  {
-    path: '/login',
-    name: 'login',
-    component: Signin
-  },
-
+  
    // Test Pages
    {
     path: '/storetest',

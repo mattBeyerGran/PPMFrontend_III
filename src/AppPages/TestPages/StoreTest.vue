@@ -51,7 +51,3 @@
     }
 </script>
 
-// ...mapActions({
-//                 toggleGoal: types.PL01PST01ROW04_TOGGLE_ACTIVE,
-//                 toggleMatch: types.PL01PST01ROW05_TOGGLE_ACTIVE
-//             })
