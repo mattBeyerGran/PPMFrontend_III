@@ -1,27 +1,31 @@
+// **********************************************
+// *  PlanSheet: PS01                           *
+// *  Module: "KreditAllgemein.js"              *
+// **********************************************
+
 <template>
-  <v-container class="bottommargin">
+  <v-container>
     <PlanHead 
-        title="Geschäftsplanung - Hypotheken" 
+        title="Geschäftsplanung - Allgemeine Kredite" 
         subtitle="Planjahr: 2022, Planversion: 3, Planungslauf: 1"
         v-bind:plannerName=" plName "
         v-bind:plannerRole=" plRole "
         />    
-    <PlanSheetToolBar ToolBarTitle="Hypotheken - Bestandsveränderung" />
-    <HypothekenTable/>
-
+    <PlanSheetToolBar ToolBarTitle="Allgemeine Kredite - Bestandsveränderung" />
+    <KreditAllgemeinTable/>
   </v-container>
 </template>
 
 <script>
 import PlanHead from  '@/components/PlanSheet/PlanHead'
 import PlanSheetToolBar from  '@/components/PlanSheet/PlanSheetToolBar'
-import HypothekenTable from  '@/AppPages/PlanSheetPages/PlanSheetTables/HypothekenTable'
+import KreditAllgemeinTable from  '@/AppPages/PlanSheetPages/PlanSheetTables/PL01_PST01_KreditAllgemeinTable'
 export default {
-  name: "Hypotheken",
+  name: "KreditAllgemein",
   components: {
     PlanHead,
     PlanSheetToolBar,
-    HypothekenTable
+    KreditAllgemeinTable
   },
   computed: {
     plName() {

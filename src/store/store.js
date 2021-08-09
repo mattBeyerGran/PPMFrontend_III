@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import router from '../router/index';
+import Plan01 from './modules/Plan01';
 
 
 import { defaultClient as apolloClient } from '../main';
@@ -20,10 +21,13 @@ export default new Vuex.Store({
     user: null,
     plannerName01: "Bernd von Staa",
     plannerRole01: "Country Manager"
+    
    },
 
   getters: {
     user: state => state.user,
+    loading: state => state.loading,
+    sideNav: state => state.sideNav,
     plannerName: state => {
       return state.plannerName01;
     },
@@ -35,6 +39,12 @@ export default new Vuex.Store({
    
     setUser: (state, payload) => {
       state.user = payload;
+    },
+    setSideNav: (state, payload) => {
+      state.sideNav = payload;
+    },
+    setLoading: (state, payload) => {
+      state.loading = payload;
     },
   },
   actions: {
@@ -84,8 +94,6 @@ export default new Vuex.Store({
    
   },
   modules: {
-  },
-  // getters: {
-  //   user: state => state.user,
-  // }
-})
+    Plan01
+  }
+});

@@ -2,27 +2,29 @@
  
     <tr v-if="isActive">
          
-        <td class="text-start ppmTabsBGColor"><v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-head-question-outline</v-icon>
-            </v-btn>{{PlanItemName}}</td>
+        <td class="text-start ppmDarkTextColor--text subtitle-1 ppmTabsBGColor">
+          <v-icon dark color="ppmPlanElementColor" class="mr-2" @click="editItem(item)">mdi-head-question-outline</v-icon>
+            {{PlanItemName}}
+        </td>
             
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode01 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode02 }}</td>
-        <td class="text-start white yellow--text subtitle-1">{{ PlanElement[0].Periode03 }}</td>
-        <td class="text-start white yellow--text subtitle-1">{{ PlanElement[0].Periode04 }}</td>
-        <td class="text-start white green--text subtitle-1">{{ PlanElement[0].Periode05 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode06 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode07 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode08 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode09 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode10 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode11 }}</td>
-        <td class="text-start white red--text subtitle-1">{{ PlanElement[0].Periode12 }}</td>
+        <td class="text-start white ppmElementRed ppmNumberRed--text subtitle-1">{{ PlanElement[0].Periode01 }}</td>
+        <td class="text-start white ppmElementRed ppmNumberRed--text subtitle-1">{{ PlanElement[0].Periode02 }}</td>
+        <td class="text-start white ppmElementYellow ppmNumberYellow--text subtitle-1">{{ PlanElement[0].Periode03 }}</td>
+        <td class="text-start white ppmElementYellow ppmNumberYellow--text subtitle-1">{{ PlanElement[0].Periode04 }}</td>
+        <td class="text-start white ppmElementGreen ppmNumberGreen--text subtitle-1">{{ PlanElement[0].Periode05 }}</td>
+        <td class="text-start white ppmElementGreen ppmNumberGreen--text subtitle-1">{{ PlanElement[0].Periode06 }}</td>
+        <td class="text-start white ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode07 }}</td>
+        <td class="text-start white ppmElementRed red ppmNumberRed--text subtitle-1">{{ PlanElement[0].Periode08 }}</td>
+        <td class="text-start white ppmElementRed ppmNumberRed--text subtitle-1">{{ PlanElement[0].Periode09 }}</td>
+        <td class="text-start white ppmElementYellow ppmNumberYellow--text subtitle-1">{{ PlanElement[0].Periode10 }}</td>
+        <td class="text-start white ppmElementRed red ppmNumberRed--text subtitle-1">{{ PlanElement[0].Periode11 }}</td>
+        <td class="text-start white ppmElementRed red ppmNumberRed--text subtitle-1">{{ PlanElement[0].Periode12 }}</td>
         
         <td class="ppmTabsBGColor">
             <!-- Item[{{PlanItem}}] -->
-            <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-information-outline</v-icon></v-btn>
-            <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-flag-checkered</v-icon></v-btn>
-            <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-account-multiple-check</v-icon></v-btn> 
+            <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="editItem(item)">mdi-pencil</v-icon>
+            <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="activateGoal(0)">mdi-flag-checkered</v-icon>
+            <v-icon dark color="ppmPlanElementColor" class="mr-4" @click="activateMatch(1)">mdi-account-multiple-check</v-icon> 
         </td>
     </tr>
 
@@ -31,12 +33,22 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+import * as types from '../../store/types';
 
 export default {
   name: "PlanRow",
   props: {
       PlanItem: { type: Number, required: true },
       PlanItemName: { type: String, required: true },
+      goal: { type: Number, required: true},
+      match: { type: Number, required: true},
+  },
+  methods: {
+      ...mapActions({
+            activateGoal: types.PL01PST01ROW04_TOGGLE_ACTIVE,
+            activateMatch: types.PL01PST01ROW05_TOGGLE_ACTIVE
+      })
   },
   data () {
       return {

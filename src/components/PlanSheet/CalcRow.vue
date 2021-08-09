@@ -1,25 +1,27 @@
 <template >
      <tr  v-if=isActive class="ppmTabsBGColor" >
          
-        <td class="text-start ppmTabsBGColor"><v-btn text><v-icon dark color="ppmParameterColor" @click="editItem(item)">mdi-calculator-variant</v-icon>
-            </v-btn>{{CalcItemName}}</td>
+        <td class="text-start ppmDarkTextColor--text subtitle-1 ppmTabsBGColor">
+          <v-icon dark color="ppmParameterColor" class="mr-2" @click="editItem(item)">mdi-calculator-variant</v-icon>
+            {{CalcItemName}}
+        </td>
             
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode01 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode02 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode03 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode04 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode05 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode06 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode07 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode08 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode09 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode10 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode11 }}</td>
-        <td class="ppmTabsBGColor">{{ PlanElement[0].Periode12 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode01 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode02 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode03 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode04 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode05 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode06 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode07 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode08 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode09 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode10 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode11 }}</td>
+        <td class="ppmTabsBGColor ppmDarkTextColor--text subtitle-1">{{ PlanElement[0].Periode12 }}</td>
         
         <td class="ppmTabsBGColor">
             <!-- Calculation[{{CalcItem}}]: -->
-            {{CalcItemName}} = {{CalcItemDesc}} 
+            <!-- {{CalcItemName}} = {{CalcItemDesc}}  -->
         </td>     
     </tr>    
 </template>

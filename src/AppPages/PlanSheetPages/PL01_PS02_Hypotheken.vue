@@ -1,30 +1,27 @@
-// **********************************************
-// *  PlanSheet: PS03                           *
-// *  Module: "Spezial.js"                      *
-// **********************************************
 <template>
-  <v-container>
+  <v-container class="bottommargin">
     <PlanHead 
-        title="Geschäftsplanung - Spezialkredite" 
+        title="Geschäftsplanung - Hypotheken" 
         subtitle="Planjahr: 2022, Planversion: 3, Planungslauf: 1"
         v-bind:plannerName=" plName "
         v-bind:plannerRole=" plRole "
-        /> 
-     <PlanSheetToolBar ToolBarTitle="Spezielle Kredite - Bestandsveränderung" />   
-     <SpezialTable/>
+        />    
+    <PlanSheetToolBar ToolBarTitle="Hypotheken - Bestandsveränderung" />
+    <HypothekenTable/>
+
   </v-container>
 </template>
 
 <script>
 import PlanHead from  '@/components/PlanSheet/PlanHead'
 import PlanSheetToolBar from  '@/components/PlanSheet/PlanSheetToolBar'
-import SpezialTable from  '@/AppPages/PlanSheetPages/PlanSheetTables/SpezialTable'
+import HypothekenTable from  '@/AppPages/PlanSheetPages/PlanSheetTables/PL01_PST02_HypothekenTable'
 export default {
-  name: "Spezial",
+  name: "PS02_Hypotheken",
   components: {
     PlanHead,
     PlanSheetToolBar,
-    SpezialTable
+    HypothekenTable
   },
   computed: {
     plName() {

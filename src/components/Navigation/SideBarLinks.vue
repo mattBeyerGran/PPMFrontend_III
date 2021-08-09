@@ -35,12 +35,12 @@
 
             <v-list-item
             color="ppmPlanTitleColor"
-            to="topictemplate"
+            to="storetest"
            >
               <v-list-item-icon>
                   <v-icon>mdi-account-hard-hat</v-icon>
               </v-list-item-icon>
-              <v-list-item-title>Topic-Page-Template</v-list-item-title>
+              <v-list-item-title>Store-Test</v-list-item-title>
           </v-list-item>
           
         </v-list>

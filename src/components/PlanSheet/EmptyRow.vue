@@ -1,5 +1,5 @@
 <template >
-     <tr  v-show=isActive >     
+     <tr  v-show=isActive  >     
         <td class="ppmTabsBGColor"></td>   
         <td class="ppmTabsBGColor"></td>
         <td class="ppmTabsBGColor"></td>  
