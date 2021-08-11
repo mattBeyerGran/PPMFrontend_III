@@ -40,18 +40,17 @@ export default {
   name: "PlanRow",
   props: {
       PlanItem: { type: String, required: false },
-      PlanItemName: { type: String, required: false },
-      goal: { type: String, required: true},
-      match: { type: String, required: true},
+      PlanItemName: { type: String, required: false }
   },
   methods: {
       ...mapActions({
-            activateGoal: types.PL01PST01ROW04_TOGGLE_ACTIVE,
+            activateGoal: types.PL01PST01ROW04_TOGGLE_ACTIVE,         
             activateMatch: types.PL01PST01ROW05_TOGGLE_ACTIVE
       })
   },
   data () {
       return {
+          // GoalActive: 'PL01PST01ROW04_TOGGLE_ACTIVE', type: String,
           PlanElement: [
           {
             Periode01: 159,

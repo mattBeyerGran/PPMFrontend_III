@@ -44,8 +44,8 @@
         },
         computed: {
         ...mapGetters({
-            isActive1: types.PL01PST01ROW04_ACTIVE,
-            isActive2: types.PL01PST01ROW05_ACTIVE
+            isActive1: types.Get_01_01_ROW04_ACTIVE,
+            isActive2: types.Get_01_01_ROW05_ACTIVE
         })
         },
     }

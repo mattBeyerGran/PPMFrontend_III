@@ -10,42 +10,23 @@ const state = {
 
 // Sheet01 - Allgemeine Kredite - Bestandsplanung
     // Row-Master Data
-    PL01_PST01: [ 
-        { 
-            RowID: '01_01_01', 
-            RowType: 'TitleRow',
-            PlanItem: '',
-            Text: 'Bestandsveraenderung in Mio.',
-            Unit: 'Euro',
-            Edit: false,
-            Goal: false,
-            Match: false,
-            Active: true
-        },
-        { 
-            RowID: '01_01_02', 
-            RowType: 'CalcRow',
-            PlanItem: '',
-            Text: 'Anfangsbestand',
-            Unit: 'Euro',
-            Edit: false,
-            Goal: false,
-            Match: false,
-            Active: true
-        },
-        { 
-            RowID: '01_01_03', 
-            RowType: 'PlanRow',
-            PlanItem: '',
-            Text: 'Anfangsbestand',
-            Unit: 'Euro',
-            Edit: true,
-            Goal: true,
-            Match: true,
-            Active: true
-        }
-
-       
+    PL01_PST01: [
+        ['RowID', 'Type', 'PlanItem', 'Text', 'Unit', 'Edit', 'Goal', 'Match', 'Active'],
+        ['01_01_01', 'TitleRow', '', 'Bestandsveraenderung in Mio.', 'Euro', '', '', '', true ],
+        ['01_01_02', 'CalcRow', '', 'Anfangsbestand', 'Euro', '', '', '', true ],
+        ['01_01_03', 'PlanRow', '27', 'Zugang', 'Euro', '', '', '', true ],
+        ['01_01_04', 'GoalRow', '', 'Vorgabe', 'Euro', '', '', '', false],
+        ['01_01_05', 'GoalRow', '', 'Ziel', 'Euro', '', '', '', true ],
+        ['01_01_06', 'MatchRow', '42', '(1:1) Match', 'Euro', '', '', '', false],
+        ['01_01_07', 'PlanRow', '34', 'Abgang', 'Euro', '', '', '', true ],
+        ['01_01_08', 'GoalRow', '', 'Vorgabe', 'Euro', '', '', '', false ],
+        ['01_01_09', 'GoalRow', '', 'Ziel', 'Euro', '', '', '', false ],
+        ['01_01_10', 'CalcRow', '', 'Endbestand', 'Euro', '', '', '', true ],
+        ['01_01_11', 'DividerRow', '', '', '', '', '', '', true ],
+        ['01_01_12', 'TitleRow', '', 'Weitere Informationen', '', '', '', '', true ],
+        ['01_01_13', 'PlanRowExtern', '', 'Kundenzuwachs', '%', '', '', '', true ],
+        ['01_01_14', 'GlobalRow', '', 'Bestands-Forecast', 'Euro', '', '', '', true ],
+        ['01_01_15', 'EmptyRow', '', '', '', '', '', '', true ],
     ],
     // Row Active Status
         PL01_PST01_Row4_Active: false, 
@@ -119,7 +100,8 @@ const mutations = {
     },
     [types.PL01PST01ROW06_MUTATE_ACTIVE]: ( state ) => {
         state.PL01_PST01_Row8_Active = !state.PL01_PST01_Row8_Active;
-        state.PL01_PST01_Row9_Active = !state.PL01_PST01_Row9_Active;   
+        state.PL01_PST01_Row9_Active = !state.PL01_PST01_Row9_Active;
+       
     }
 };
 export default {
