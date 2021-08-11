@@ -1,3 +1,7 @@
+// **********************************************
+// *  PlanSheetTable: PST01                     *
+// *  Module: "KreditAllgemein.js"              *
+// **********************************************
 <template >
   <v-container class="bottommargin">
         <v-simple-table dense>
@@ -23,11 +27,17 @@
             <tbody>      
               <TitleRow/> 
               <CalcRow CalcItem="32" v-bind:CalcItemName=TextCalc01 v-bind:CalcItemDesc=DescCalcs01 />
-              <PlanRow PlanItem="33" v-bind:PlanItemName=PlanItems[0].PlanText goal=0 match=1 />
+
+              <!-- <PlanRow PlanItem="33" v-bind:PlanItemName=PlanItems[0].PlanText goal=0 match=1 /> -->
+              <!-- <PlanRow PlanItem="33" v-bind:PlanItemName=PlanItems[0].PlanText ActiveGoalRows='PL01PST01ROW04_TOGGLE_ACTIVE' /> -->
+              <PlanRow PlanItem="33" />
+
               <GoalRow v-show="isActive1" v-bind:MatchRow=PlanItems[0].ItemId />
-              <GoalRow v-show="isActive1" v-bind:MatchRow=PlanItems[0].ItemId />
-              <MatchRow v-show="isActive2" v-bind:MatchRow=PlanItems[0].ItemId />              
-              <PlanRow PlanItem="34" v-bind:PlanItemName="TextItem02" goal=0 match=1 />
+              <GoalRow v-show="isActive2" v-bind:MatchRow=PlanItems[0].ItemId />
+              <MatchRow v-show="isActive3" v-bind:MatchRow=PlanItems[0].ItemId />   
+
+              <PlanRow PlanItem="34" v-bind:PlanItemName="TextItem02" ActiveGoalRows='PL01PST01ROW04_TOGGLE_ACTIVE' />
+
               <CalcRow CalcItem=1 v-bind:CalcItemName=TextCalc02 v-bind:CalcItemDesc=DescCalcs01 />   
               <DividerRow/>
               <TitleRow/> 
@@ -43,7 +53,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { mapActions } from 'vuex';
+// import { mapActions } from 'vuex';
 
 
 
@@ -58,8 +68,8 @@ import EmptyRow from  '@/components/PlanSheet/EmptyRow'
 import TitleRow from  '@/components/PlanSheet/TitleRow'
 import DividerRow from  '@/components/PlanSheet/DividerRow'
   export default {
-     goal: Number,
-     match: Number,
+     
+     
      components: {
       PlanRow,
       GoalRow,
@@ -73,15 +83,10 @@ import DividerRow from  '@/components/PlanSheet/DividerRow'
     },
     computed: {
       ...mapGetters({
-          isActive1: types.PL01PST01ROW04_ACTIVE,
-          isActive2: types.PL01PST01ROW05_ACTIVE
+          isActive1: types.Get_01_01_ROW04_ACTIVE,
+          isActive2: types.Get_01_01_ROW05_ACTIVE,
+          isActive3: types.Get_01_01_ROW06_ACTIVE
     })
-    },
-    methods: {
-      ...mapActions({
-          toggleGoal: types.PL01PST01ROW04_TOGGLE_ACTIVE,
-          toggleMatch: types.PL01PST01ROW05_TOGGLE_ACTIVE
-            })
     },
     data () {
       return {
