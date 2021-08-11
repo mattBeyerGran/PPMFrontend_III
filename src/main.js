@@ -8,6 +8,17 @@ import DatetimePicker from 'vuetify-datetime-picker'
 import ApolloClient from 'apollo-boost';
 import VueApollo from 'vue-apollo';
 
+
+import mbgPlanHead from './components/PlanSheet/PlanHead.vue'
+import mbgPlanSheetToolBar from './components/PlanSheet/PlanSheetToolBar.vue'
+import mbgTableHeaderMonate from './components/PlanSheet/TableHeaderMonate.vue'
+import mbgGoalRow from './components/PlanSheet/GoalRow.vue'
+
+Vue.component('my-plan-head', mbgPlanHead);
+Vue.component('my-plan-sheet-tool-bar', mbgPlanSheetToolBar);
+Vue.component('my-table-header-monate', mbgTableHeaderMonate);
+Vue.component('my-goal-row', mbgGoalRow);
+
 /* import VueGoogleCharts from 'vue-google-charts' */
 
 Vue.use(VueApollo, DatetimePicker, /* VueGoogleCharts */);

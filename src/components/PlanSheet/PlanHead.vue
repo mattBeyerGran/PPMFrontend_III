@@ -28,7 +28,7 @@
 
 
 export default {
-  name: "PlanHead",
+  name: "mbg-plan-head",
   props: {
     title: {
       type: String,

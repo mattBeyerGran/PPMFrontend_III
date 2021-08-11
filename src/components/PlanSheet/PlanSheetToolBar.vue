@@ -72,7 +72,7 @@
                           <v-btn
                             color="ppmParameterColor"
                             text
-                            @click="toggleDialog"
+                            @click="toggleParameters"
                           >
                             cancel
                           </v-btn>
@@ -96,7 +96,7 @@
 
 <script>
 export default {
-    name: "PlanSheetToolBar",
+    name: "mbg-plan-sheet-tool-bar",
     data () {
       return {
         alert: false,

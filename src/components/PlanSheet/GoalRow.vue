@@ -34,7 +34,7 @@
 <script>
 
 export default {
-  name: "PlanRow",
+  name: "my-goal-row",
   props: {
       PlanItem: { type: String, required: false },
       PlanItemName: { type: String, required: false },

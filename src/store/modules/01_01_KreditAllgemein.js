@@ -13,7 +13,6 @@ const state = {
  PL01_PST01_Row8_Active: false, 
  PL01_PST01_Row9_Active: false,    
 
-// Sheet01 - Allgemeine Kredite - Bestandsplanung
     // Row-Master Data
     PL01_PST01: [ 
         { 

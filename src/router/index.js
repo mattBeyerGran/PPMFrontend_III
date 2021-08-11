@@ -10,15 +10,11 @@ import Profil from '../components/Auth/Profile.vue'
 import Signin from '../components/Auth/Signin.vue'
 
 /* Plan Sheets */
-import KreditAllgemein from '../AppPages/PlanSheetPages/PL01_PS01_KreditAllgemein.vue'
-import Hypotheken from '../AppPages/PlanSheetPages/PL01_PS02_Hypotheken.vue'
-import Spezial from '../AppPages/PlanSheetPages/PL01_PS03_Spezial.vue'
-
-// Test Pages
-import StoreTest from '../AppPages/TestPages/StoreTest.vue'
+import KreditAllgemein from '../AppPages/Plan01/PlanSheet01/01-01-KreditAllgemein.vue'
+import Hypotheken from '../AppPages/Plan01/PlanSheet02/01-02-Hypotheken.vue'
+import Spezial from '../AppPages/Plan01/PlanSheet03/01-03-SpezialKredit.vue'
 
 Vue.use(VueRouter)
-
 
 const routes = [
   // ROOT
@@ -54,14 +50,7 @@ const routes = [
     path: '/profile',
     name: 'profile',
     component: Profil
-  },
-  
-   // Test Pages
-   {
-    path: '/storetest',
-    name: 'storetest',
-    component: StoreTest
-  },
+  }
 ]
 
 const router = new VueRouter({
