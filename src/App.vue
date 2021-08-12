@@ -43,7 +43,7 @@ export default {
   margin-bottom: 35px;
 }
 .leftmargin{
-  margin-left: 0px;
+  margin-left: 200px;
   
 }
 .rightmargin{

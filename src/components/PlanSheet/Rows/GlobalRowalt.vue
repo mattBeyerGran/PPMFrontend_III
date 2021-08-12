@@ -2,7 +2,7 @@
  
     <tr>
          
-        <td class="text-start ppmTabsBGColor"><v-icon dark color="ppmParameterColor" @click="editItem(item)">mdi-head-question-outline</v-icon>
+        <td class="text-start ppmTabsBGColor"><v-icon dark color="ppmParameterColor" @click="editItem(item)">mdi-earth</v-icon>
             {{PlanItemName}}</td>
             
         <td class="text-start white ppmDarkTextColor--text subtitle-1 ppmTabsBGColor">{{ PlanElement[0].Periode01 }}</td>
@@ -32,14 +32,14 @@
 <script>
 
 export default {
-  name: "PlanRow",
+  name: "my-global-row",
   props: {
       PlanItem: { type: Number, required: false },
       PlanItemName: { type: String, required: false },
   },
   data () {
       return {
-          PlanElement: [
+        PlanElement: [
           {
             Periode01: 259,
             Periode02: 237,

@@ -19,11 +19,7 @@
 
 <script>
 export default {
-  name: "my-empty-row",
-  data () {
-    return{
-      
-    }
-  }
+  name: "my-empty-row"
+  
 }
 </script>

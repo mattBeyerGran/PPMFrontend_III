@@ -1,7 +1,7 @@
 <template >
     <tr>        
-        <td class="text-start pl-12  ppmDarkTextColor--text ppmTabsBGColor">
-          <v-icon dark color="ppmPlanElementColor" class="mr-2" >mdi-flag-checkered</v-icon>
+        <td class="text-start  ppmDarkTextColor--text ppmTabsBGColor subtitle-1">
+          <v-icon dark color="ppmParameterColor" class="mr-2" >mdi-calculator-variant</v-icon>
               {{ ElementField }}
         </td>    
           <slot></slot> 
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "my-goal-row",
+  name: "my-calc-row",
   props: {    
       ElementField: { type: String, required: true },
       EndTextField: { type: String, required: false },

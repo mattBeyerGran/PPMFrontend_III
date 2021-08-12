@@ -1,9 +1,9 @@
 <template>
-    <td  class="ppmTabsBGColor" v-bind:style="{color : fieldColor, background : fieldBGColor}">{{fieldValue}}</td>
+    <td  class="ppmTabsBGColor subtitle-1" v-bind:style="{color : fieldColor, background : fieldBGColor}">{{fieldValue}}</td>
 </template>
 <script>
 export default {
-  name: "my-value-field",
+  name: "my-plan-field",
   props: {
       fieldValue: { type: Number, required: false },
       fieldColor: { type: String, required: false },

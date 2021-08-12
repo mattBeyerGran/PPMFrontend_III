@@ -16,8 +16,16 @@ import mbgTableHeaderQuartale from './components/PlanSheet/TableHeaderQuartale.v
 import mbgTableHeader5Jahre from './components/PlanSheet/TableHeader5Jahre.vue'
 import mbgBasisRow from './components/PlanSheet/Rows/BasisRow.vue'
 import mbgGoalRow from './components/PlanSheet/Rows/GoalRow.vue'
+import mbgMatchRow from './components/PlanSheet/Rows/MatchRow.vue'
+import mbgPlanRow from './components/PlanSheet/Rows/PlanRow.vue'
+import mbgPlanRowExtern from './components/PlanSheet/Rows/PlanRowExtern.vue'
+import mbgGlobalRow from './components/PlanSheet/Rows/GlobalRow.vue'
+import mbgCalcRow from './components/PlanSheet/Rows/CalcRow.vue'
 import mbgDivider from './components/PlanSheet/Rows/DividerRow.vue'
+import mbgEmptyRow from './components/PlanSheet/Rows/EmptyRow.vue'
+import mbgTitleRow from './components/PlanSheet/Rows/TitleRow.vue'
 import mbgValueField from './components/PlanSheet/Fields/ValueField.vue'
+import mbgPlanField from './components/PlanSheet/Fields/PlanField.vue'
 
 
 Vue.component('my-plan-head', mbgPlanHead);
@@ -27,8 +35,16 @@ Vue.component('my-table-header-quartale', mbgTableHeaderQuartale);
 Vue.component('my-table-header-5jahre', mbgTableHeader5Jahre);
 Vue.component('my-basis-row', mbgBasisRow);
 Vue.component('my-goal-row', mbgGoalRow);
+Vue.component('my-match-row', mbgMatchRow);
+Vue.component('my-plan-row', mbgPlanRow);
+Vue.component('my-plan-row-extern', mbgPlanRowExtern);
+Vue.component('my-global-row', mbgGlobalRow);
+Vue.component('my-calc-row', mbgCalcRow);
 Vue.component('my-divider', mbgDivider);
+Vue.component('my-empty-row', mbgEmptyRow);
+Vue.component('my-title-row', mbgTitleRow);
 Vue.component('my-value-field', mbgValueField);
+Vue.component('my-plan-field', mbgPlanField);
 
 
 
