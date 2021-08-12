@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "DividerRow",
+  name: "my-divider",
   data () {
     return{
       

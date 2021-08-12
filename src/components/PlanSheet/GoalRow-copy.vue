@@ -4,22 +4,21 @@
          
         <td class="text-start pl-12  ppmDarkTextColor--text ppmTabsBGColor">
           <v-icon dark color="ppmPlanElementColor" class="mr-2" @click="editItem(item)">mdi-flag-checkered</v-icon>
-            Default
-        </td>
-            
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode01 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode02 }}</td>
-        <td class="text-start white ppmNumberYellow--text ppmTabsBGColor">{{ PlanElement[0].Periode03 }}</td>
-        <td class="text-start white ppmNumberYellow--text ppmTabsBGColor">{{ PlanElement[0].Periode04 }}</td>
-        <td class="text-start white ppmNumberGreen--text ppmTabsBGColor">{{ PlanElement[0].Periode05 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode06 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode07 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode08 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode09 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode10 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode11 }}</td>
-        <td class="text-start white ppmNumberRed--text ppmTabsBGColor">{{ PlanElement[0].Periode12 }}</td>
-        
+              {{ PlanElementText }}
+        </td>    
+          <slot name="jan" ></slot>
+          <slot name="feb" ></slot>
+          <slot name="mar" ></slot>
+          <slot name="apr" ></slot>
+          <slot name="mai" ></slot>
+          <slot name="jun" ></slot>
+          <slot name="jul" ></slot>
+          <slot name="aug" ></slot>
+          <slot name="sep" ></slot>
+          <slot name="okt" ></slot>
+          <slot name="nov" ></slot>
+          <slot name="dez" ></slot> 
+                
         <td class="ppmTabsBGColor">
             <!-- Item[{{PlanItem}}] -->
             <!-- <v-btn text><v-icon dark color="ppmPlanElementColor" @click="editItem(item)">mdi-information-outline</v-icon></v-btn> -->
@@ -37,12 +36,13 @@ export default {
   name: "my-goal-row",
   props: {
       PlanItem: { type: String, required: false },
-      PlanItemName: { type: String, required: false },
+      PlanElementText: { type: String, required: false },
   },
   data () {
       return {
           isActive: true,
           isActive2: true,
+          cols: [ 23, 45, 63],
           PlanElement: [
           {
             Periode01: 259,
@@ -97,3 +97,11 @@ export default {
 }
 
 </script>
+<style lang="scss" scoped>
+
+#jan-red {
+  color:brown;
+  background: chartreuse;
+}
+</style>
+

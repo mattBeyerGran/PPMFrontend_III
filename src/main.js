@@ -12,12 +12,25 @@ import VueApollo from 'vue-apollo';
 import mbgPlanHead from './components/PlanSheet/PlanHead.vue'
 import mbgPlanSheetToolBar from './components/PlanSheet/PlanSheetToolBar.vue'
 import mbgTableHeaderMonate from './components/PlanSheet/TableHeaderMonate.vue'
-import mbgGoalRow from './components/PlanSheet/GoalRow.vue'
+import mbgTableHeaderQuartale from './components/PlanSheet/TableHeaderQuartale.vue'
+import mbgTableHeader5Jahre from './components/PlanSheet/TableHeader5Jahre.vue'
+import mbgBasisRow from './components/PlanSheet/Rows/BasisRow.vue'
+import mbgGoalRow from './components/PlanSheet/Rows/GoalRow.vue'
+import mbgDivider from './components/PlanSheet/Rows/DividerRow.vue'
+import mbgValueField from './components/PlanSheet/Fields/ValueField.vue'
+
 
 Vue.component('my-plan-head', mbgPlanHead);
 Vue.component('my-plan-sheet-tool-bar', mbgPlanSheetToolBar);
 Vue.component('my-table-header-monate', mbgTableHeaderMonate);
+Vue.component('my-table-header-quartale', mbgTableHeaderQuartale);
+Vue.component('my-table-header-5jahre', mbgTableHeader5Jahre);
+Vue.component('my-basis-row', mbgBasisRow);
 Vue.component('my-goal-row', mbgGoalRow);
+Vue.component('my-divider', mbgDivider);
+Vue.component('my-value-field', mbgValueField);
+
+
 
 /* import VueGoogleCharts from 'vue-google-charts' */
 

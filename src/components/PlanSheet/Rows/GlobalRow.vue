@@ -32,7 +32,7 @@
 <script>
 
 export default {
-  name: "PlanRow",
+  name: "my-global-row",
   props: {
       PlanItem: { type: Number, required: false },
       PlanItemName: { type: String, required: false },

@@ -16,7 +16,7 @@
     <v-container>
           <v-simple-table dense>
             <thead>
-                <my-table-header-monate></my-table-header-monate>
+                <my-table-header-5jahre jahr1="2022" jahr2="2023" jahr3="2024" jahr4="2025" jahr5="2026"></my-table-header-5jahre>
             </thead>
             <tbody>      
               

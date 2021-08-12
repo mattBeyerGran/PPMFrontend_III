@@ -16,10 +16,10 @@
     <v-container>
           <v-simple-table dense>
             <thead>
-                <my-table-header-monate></my-table-header-monate>
+                <my-table-header-quartale></my-table-header-quartale>
             </thead>
             <tbody>      
-              
+              <my-goal-row></my-goal-row>
              
             </tbody>         
           <!-- </template> -->

@@ -1,5 +1,5 @@
 <template >
-     <tr  v-show=isActive  >     
+     <tr>     
         <td class="ppmTabsBGColor"></td>   
         <td class="ppmTabsBGColor"></td>
         <td class="ppmTabsBGColor"></td>  
@@ -19,10 +19,10 @@
 
 <script>
 export default {
-  name: "EmptyRow",
+  name: "my-empty-row",
   data () {
     return{
-      isActive: true
+      
     }
   }
 }

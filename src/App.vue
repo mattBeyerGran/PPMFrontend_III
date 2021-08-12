@@ -19,7 +19,7 @@ export default {
   name: "App",
   data(){
     return {
-     
+      activeColor: '',
     }
   },
   components: {
@@ -43,11 +43,11 @@ export default {
   margin-bottom: 35px;
 }
 .leftmargin{
-  margin-left: 200px;
+  margin-left: 0px;
   
 }
 .rightmargin{
-  margin-right: 150px;
+  margin-right: 0px;
 }
 .main-content{
   background-color: #EAEAEA;
