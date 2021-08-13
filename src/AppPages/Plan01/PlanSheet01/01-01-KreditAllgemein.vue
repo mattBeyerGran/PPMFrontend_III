@@ -19,8 +19,10 @@
                 <my-table-header-monate></my-table-header-monate>
             </thead>
             <tbody>
-              <my-title-row ElementField="Bestandsveränderung in Mio." ColumnText="Euro" EndTextField="">
+              <my-divider></my-divider>
+              <my-title-row ElementField="Bestandsveränderung" ColumnText="Euro" EndTextField="in Mio.">
               </my-title-row>  
+<!-- CalcRow 1 -->
               <my-calc-row :ElementField="RowTitles[5].ElementText" :EndTextField="RowTitles[5].EndText">
                           <my-plan-field 
                           v-for="value in Row06FieldValues"
@@ -30,7 +32,8 @@
                           :fieldBGColor="value.mbgFieldBGColor"
                       ></my-plan-field> 
                 </my-calc-row>  
-              <my-plan-row :ElementField="RowTitles[3].ElementText" >
+<!-- PlanRow 1 -->
+              <my-plan-row :ElementField="RowTitles[3].ElementText" v-bind:isParallel="true" v-bind:isGoal="false" v-bind:isMatch="false" v-bind:isReload="true" v-bind:isOK="true">
                           <my-plan-field 
                           v-for="value in Row04FieldValues"
                           :key="value.id"
@@ -39,33 +42,35 @@
                           :fieldBGColor="value.mbgFieldBGColor"
                       ></my-plan-field> 
                 </my-plan-row>  
-              <my-goal-row :ElementField="RowTitles[0].ElementText" :EndTextField="RowTitles[0].EndText">            
-                    <my-value-field 
-                        v-for="value in Row01FieldValues"
-                        :key="value.id"
-                        :fieldValue="value.mbgFieldValue" 
-                        :fieldColor="value.mbgFieldColor"
-                    ></my-value-field>            
-              </my-goal-row>             
-              <my-goal-row :ElementField="RowTitles[1].ElementText" :EndTextField="RowTitles[1].EndText">            
-                      <my-value-field 
-                          v-for="value in Row02FieldValues"
-                          :key="value.id"
-                          :fieldValue="value.mbgFieldValue" 
-                          :fieldColor="value.mbgFieldColor"
-                          :fieldBGColor="value.mbgFieldBGColor"
-                      ></my-value-field>            
-                </my-goal-row>
-                <my-match-row :ElementField="RowTitles[2].ElementText" :EndTextField="RowTitles[2].EndText">
-                          <my-value-field 
-                          v-for="value in Row03FieldValues"
-                          :key="value.id"
-                          :fieldValue="value.mbgFieldValue" 
-                          :fieldColor="value.mbgFieldColor"
-                          :fieldBGColor="value.mbgFieldBGColor"
-                      ></my-value-field> 
-                </my-match-row>
-                <my-plan-row :ElementField="RowTitles[4].ElementText" >
+                          <my-goal-row :ElementField="RowTitles[0].ElementText" :EndTextField="RowTitles[0].EndText" v-bind:isUpload="true">            
+                                <my-value-field 
+                                    v-for="value in Row01FieldValues"
+                                    :key="value.id"
+                                    :fieldValue="value.mbgFieldValue" 
+                                    :fieldColor="value.mbgFieldColor"
+                                    :fieldBGColor="value.mbgFieldBGColor"
+                                ></my-value-field>            
+                          </my-goal-row>             
+                          <my-goal-row :ElementField="RowTitles[1].ElementText" :EndTextField="RowTitles[1].EndText" v-bind:isUpload="true">            
+                                  <my-value-field 
+                                      v-for="value in Row02FieldValues"
+                                      :key="value.id"
+                                      :fieldValue="value.mbgFieldValue" 
+                                      :fieldColor="value.mbgFieldColor"
+                                      :fieldBGColor="value.mbgFieldBGColor"
+                                  ></my-value-field>            
+                            </my-goal-row>
+                            <my-match-row :ElementField="RowTitles[2].ElementText" :EndTextField="RowTitles[2].EndText" v-bind:isUpload="true">
+                                      <my-value-field 
+                                      v-for="value in Row03FieldValues"
+                                      :key="value.id"
+                                      :fieldValue="value.mbgFieldValue" 
+                                      :fieldColor="value.mbgFieldColor"
+                                      :fieldBGColor="value.mbgFieldBGColor"
+                                  ></my-value-field> 
+                            </my-match-row>
+<!-- PlanRow 2 -->
+                <my-plan-row :ElementField="RowTitles[4].ElementText" v-bind:isParallel="true" v-bind:isGoal="false" v-bind:isMatch="false" v-bind:isReload="true" v-bind:isOK="true">
                           <my-plan-field 
                           v-for="value in Row05FieldValues"
                           :key="value.id"
@@ -74,6 +79,25 @@
                           :fieldBGColor="value.mbgFieldBGColor"
                       ></my-plan-field>
                 </my-plan-row>
+                            <my-goal-row :ElementField="RowTitles[0].ElementText" :EndTextField="RowTitles[0].EndText" v-bind:isUpload="true">            
+                                  <my-value-field 
+                                      v-for="value in Row02FieldValues"
+                                      :key="value.id"
+                                      :fieldValue="value.mbgFieldValue" 
+                                      :fieldColor="value.mbgFieldColor"
+                                      :fieldBGColor="value.mbgFieldBGColor"
+                                  ></my-value-field>            
+                            </my-goal-row>             
+                            <my-goal-row :ElementField="RowTitles[1].ElementText" :EndTextField="RowTitles[1].EndText" v-bind:isUpload="true">            
+                                    <my-value-field 
+                                        v-for="value in Row02FieldValues"
+                                        :key="value.id"
+                                        :fieldValue="value.mbgFieldValue" 
+                                        :fieldColor="value.mbgFieldColor"
+                                        :fieldBGColor="value.mbgFieldBGColor"
+                                    ></my-value-field>            
+                              </my-goal-row>
+<!-- CalcRow 2 -->
                 <my-calc-row :ElementField="RowTitles[6].ElementText" :EndTextField="RowTitles[6].EndText">
                           <my-plan-field 
                           v-for="value in Row07FieldValues"
@@ -83,9 +107,15 @@
                           :fieldBGColor="value.mbgFieldBGColor"
                       ></my-plan-field> 
                 </my-calc-row>  
-                <my-divider></my-divider>
-                <my-title-row ElementField="Zusatzinformationen" ColumnText="%" EndTextField="">
+                <my-divider></my-divider><my-divider></my-divider><my-divider></my-divider>
+
+
+<!-- Zusatzinformationen -->
+                <my-title-row ElementField="Zusatzinformationen" ColumnText="" EndTextField="">
+              </my-title-row> 
+              <my-title-row ElementField="" ColumnText="%" EndTextField="">
               </my-title-row>  
+
                 <my-plan-row-extern :ElementField="RowTitles[7].ElementText" :EndTextField="RowTitles[7].EndText">
                           <my-plan-field 
                           v-for="value in Row08FieldValues"
@@ -95,6 +125,12 @@
                           :fieldBGColor="value.mbgFieldBGColor"
                       ></my-plan-field> 
                 </my-plan-row-extern> 
+                <my-empty-row></my-empty-row>
+              <my-divider></my-divider>
+              <my-empty-row></my-empty-row>
+                <my-title-row ElementField="" ColumnText="Euro" EndTextField="in Mio.">
+              </my-title-row>  
+
                 <my-global-row :ElementField="RowTitles[8].ElementText" :EndTextField="RowTitles[8].EndText">
                           <my-plan-field 
                           v-for="value in Row09FieldValues"
@@ -107,8 +143,6 @@
                 <my-empty-row></my-empty-row>
             </tbody>                  
         </v-simple-table>
-        
-        <!-- <div v-bind:style="{ color: activeColor}"> 3333</div> -->
     </v-container>
   </v-container>
 </template>
@@ -160,7 +194,7 @@ export default {
             {
               id: "Row6",
               ElementText: "Anfangbestand",
-              EndText: "Der Anfangsbestand fuer Januar wird ueber einen Parameter eingetragen."
+              EndText: "Anfangsbestand = Endbestand des Vormonats. Der Anfangsbestand fuer Januar wird ueber einen Parameter eingetragen."
             },
             {
               id: "Row7",
@@ -169,32 +203,32 @@ export default {
             },
             {
               id: "Row8",
-              ElementText: "Kundenzuwachs in %",
+              ElementText: "Kundenzuwachs",
               EndText: "Wird durch Sales unabhaengig von diesem Planungs-Sheet geplant."
             },
             {
               id: "Row9",
               ElementText: "Forecast Allg.Kredite",
-              EndText: "maschinell prognostiziert."
+              EndText: "wird maschinell prognostiziert."
             }
           ],
           Row01FieldValues: [
             {
               id: 'Jan',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#3CB283',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Feb',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#3CB283',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Mar',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#F44336',
               mbgFieldBGColor: '#E8F0F7'
             },
             {
@@ -206,13 +240,13 @@ export default {
              {
               id: 'Mai',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#3CB283',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Jun',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#3CB283',
               mbgFieldBGColor: '#E8F0F7'
             },
             {
@@ -236,7 +270,7 @@ export default {
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#3CB283',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
@@ -256,19 +290,19 @@ export default {
             {
               id: 'Jan',
               mbgFieldValue: 628.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#3CB283',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Feb',
               mbgFieldValue: 728.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#3CB283',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Mar',
               mbgFieldValue: 1228.26,
-              mbgFieldColor: '#182F6D',
+              mbgFieldColor: '#F44336',
               mbgFieldBGColor: '#E8F0F7'
             },
             {
@@ -310,7 +344,7 @@ export default {
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#D08B01',
+              mbgFieldColor: '#F44336',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
@@ -404,148 +438,148 @@ export default {
             {
               id: 'Jan',
               mbgFieldValue: 628.26,
-              mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldColor: '#3CB283',
+              mbgFieldBGColor: '#B9F6CA'
             },
              {
               id: 'Feb',
               mbgFieldValue: 728.26,
-              mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldColor: '#3CB283',
+              mbgFieldBGColor: '#B9F6CA'
             },
              {
               id: 'Mar',
               mbgFieldValue: 1228.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFCDD2'
             },
             {
               id: 'Apr',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Mai',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#3CB283',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#B9F6CA'
             },
              {
               id: 'Jun',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#3CB283',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#B9F6CA'
             },
             {
               id: 'Jul',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Aug',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Sep',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#D08B01',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFF9C4'
             },
              {
               id: 'Nov',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Dez',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
           ],
           Row05FieldValues: [
             {
               id: 'Jan',
               mbgFieldValue: 628.26,
-              mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldColor: '#3CB283',
+              mbgFieldBGColor: '#B9F6CA'
             },
              {
               id: 'Feb',
               mbgFieldValue: 728.26,
-              mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldColor: '#3CB283',
+              mbgFieldBGColor: '#B9F6CA'
             },
              {
               id: 'Mar',
               mbgFieldValue: 1228.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFCDD2'
             },
             {
               id: 'Apr',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Mai',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#3CB283',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#B9F6CA'
             },
              {
               id: 'Jun',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#3CB283',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#B9F6CA'
             },
             {
               id: 'Jul',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Aug',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Sep',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#D08B01',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFF9C4'
             },
              {
               id: 'Nov',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
              {
               id: 'Dez',
               mbgFieldValue: 528.26,
               mbgFieldColor: '#182F6D',
-              mbgFieldBGColor: '#E8F0F7'
+              mbgFieldBGColor: '#FFFFFF'
             },
           ],
           Row06FieldValues: [
@@ -576,13 +610,13 @@ export default {
              {
               id: 'Mai',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Jun',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
             {
@@ -606,7 +640,7 @@ export default {
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#D08B01',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
@@ -650,13 +684,13 @@ export default {
              {
               id: 'Mai',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Jun',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
             {
@@ -680,7 +714,7 @@ export default {
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#D08B01',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
@@ -724,13 +758,13 @@ export default {
              {
               id: 'Mai',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Jun',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
             {
@@ -754,7 +788,7 @@ export default {
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#D08B01',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
@@ -798,13 +832,13 @@ export default {
              {
               id: 'Mai',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {
               id: 'Jun',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#3CB283',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
             {
@@ -828,7 +862,7 @@ export default {
             {
               id: 'Okt',
               mbgFieldValue: 528.26,
-              mbgFieldColor: '#D08B01',
+              mbgFieldColor: '#182F6D',
               mbgFieldBGColor: '#E8F0F7'
             },
              {

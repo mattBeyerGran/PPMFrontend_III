@@ -1,5 +1,5 @@
 <template>
-    <td  class="subtitle-1" v-bind:style="{color: fieldColor, backgroundColor: fieldBGColor, borderColor: fieldBGColor}">{{fieldValue}}</td>
+    <td  class="ppmTabsBGColor subtitle-1" v-bind:style="{color : fieldColor, background : fieldBGColor}">{{fieldValue}}</td>
 </template>
 <script>
 export default {

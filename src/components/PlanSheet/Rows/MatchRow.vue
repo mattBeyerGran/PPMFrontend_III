@@ -6,7 +6,10 @@
         </td>    
           <slot></slot> 
                 
-        <td class="text-start ppmDarkTextColor--text ppmTabsBGColor">{{ EndTextField }}</td>
+        <td class="text-start font-weight-light ppmDarkTextColor--text ppmTabsBGColor">
+          <v-icon v-show="isUpload" dark color="ppmPlanElementColor" class="mr-4" >
+            mdi-upload-outline</v-icon>{{ EndTextField }}
+        </td>
     </tr>    
 </template>
 
@@ -15,6 +18,7 @@ export default {
   name: "my-match-row",
   props: {    
       ElementField: { type: String, required: true },
+      isUpload: { type: Boolean, required: false},
       EndTextField: { type: String, required: false },
   }
 }

@@ -34,6 +34,8 @@ export default new Vuetify({
         ppmElementGreen: "#B9F6CA",
         ppmElementYellow: "#FFF9C4",
         ppmElementRed: "#FFCDD2",
+        ppmOK: "#00C853",
+        ppmCancel: "#DD2C00",
         
         primary: "#0682BC",
         secondary: "#354A5F",

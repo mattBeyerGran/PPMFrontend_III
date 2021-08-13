@@ -1,22 +1,22 @@
 <template >
     <tr>        
-        <td class="text-start  ppmDarkTextColor--text ppmTabsBGColor subtitle-2">
+        <td class="text-start  ppmDarkTextColor--text ppmTabsBGColor title">
            {{ ElementField }}
         </td>    
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>  
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
-        <td class="ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light text-small ppmTabsBGColor ppmDarkTextColor--text" >{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>  
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
                 
-        <td class="text-start ppmDarkTextColor--text ppmTabsBGColor">{{ EndTextField }}</td>
+        <td class="text-start font-weight-light ppmDarkTextColor--text ppmTabsBGColor">{{ EndTextField }}</td>
     </tr>    
 </template>
 

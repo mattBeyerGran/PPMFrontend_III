@@ -6,7 +6,7 @@
         </td>    
           <slot></slot> 
                 
-        <td class="text-start ppmDarkTextColor--text ppmTabsBGColor">{{ EndTextField }}</td>
+        <td class="text-start font-weight-light ppmDarkTextColor--text ppmTabsBGColor">{{ EndTextField }}</td>
     </tr>    
 </template>
 
