@@ -19,7 +19,8 @@
                 <my-table-header-quartale></my-table-header-quartale>
             </thead>
             <tbody>      
-              <my-goal-row></my-goal-row>
+              <my-title-row ElementField="Bestandsveränderung" ColumnText="Euro" EndTextField="in Mio.">
+              </my-title-row> 
              
             </tbody>         
           <!-- </template> -->

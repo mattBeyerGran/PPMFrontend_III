@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-  name: "my-plan-field",
+  name: "my-result-field",
   props: {
       fieldValue: { type: Number, required: false },
       fieldColor: { type: String, required: false },

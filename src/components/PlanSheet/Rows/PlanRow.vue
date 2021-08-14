@@ -27,8 +27,7 @@ export default {
       isGoal: { type: Boolean, required: false},
       isMatch: { type: Boolean, required: false},
       isReload: { type: Boolean, required: false},
-      isOK: { type: Boolean, required: false}
-      
+      isOK: { type: Boolean, required: false}  
   }
 }
 </script>

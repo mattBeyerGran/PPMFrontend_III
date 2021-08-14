@@ -26,6 +26,7 @@ import mbgEmptyRow from './components/PlanSheet/Rows/EmptyRow.vue'
 import mbgTitleRow from './components/PlanSheet/Rows/TitleRow.vue'
 import mbgValueField from './components/PlanSheet/Fields/ValueField.vue'
 import mbgPlanField from './components/PlanSheet/Fields/PlanField.vue'
+import mbgResultField from './components/PlanSheet/Fields/ResultField.vue'
 
 
 Vue.component('my-plan-head', mbgPlanHead);
@@ -45,6 +46,7 @@ Vue.component('my-empty-row', mbgEmptyRow);
 Vue.component('my-title-row', mbgTitleRow);
 Vue.component('my-value-field', mbgValueField);
 Vue.component('my-plan-field', mbgPlanField);
+Vue.component('my-result-field', mbgResultField);
 
 
 

@@ -24,13 +24,13 @@
               </my-title-row>  
 <!-- CalcRow 1 -->
               <my-calc-row :ElementField="RowTitles[5].ElementText" :EndTextField="RowTitles[5].EndText">
-                          <my-plan-field 
+                          <my-result-field 
                           v-for="value in Row06FieldValues"
                           :key="value.id"
                           :fieldValue="value.mbgFieldValue" 
                           :fieldColor="value.mbgFieldColor"
                           :fieldBGColor="value.mbgFieldBGColor"
-                      ></my-plan-field> 
+                      ></my-result-field> 
                 </my-calc-row>  
 <!-- PlanRow 1 -->
               <my-plan-row :ElementField="RowTitles[3].ElementText" v-bind:isParallel="true" v-bind:isGoal="false" v-bind:isMatch="false" v-bind:isReload="true" v-bind:isOK="true">
@@ -99,13 +99,13 @@
                               </my-goal-row>
 <!-- CalcRow 2 -->
                 <my-calc-row :ElementField="RowTitles[6].ElementText" :EndTextField="RowTitles[6].EndText">
-                          <my-plan-field 
+                          <my-result-field 
                           v-for="value in Row07FieldValues"
                           :key="value.id"
                           :fieldValue="value.mbgFieldValue" 
                           :fieldColor="value.mbgFieldColor"
                           :fieldBGColor="value.mbgFieldBGColor"
-                      ></my-plan-field> 
+                      ></my-result-field> 
                 </my-calc-row>  
                 <my-divider></my-divider><my-divider></my-divider><my-divider></my-divider>
 
@@ -117,13 +117,13 @@
               </my-title-row>  
 
                 <my-plan-row-extern :ElementField="RowTitles[7].ElementText" :EndTextField="RowTitles[7].EndText">
-                          <my-plan-field 
+                          <my-result-field 
                           v-for="value in Row08FieldValues"
                           :key="value.id"
                           :fieldValue="value.mbgFieldValue" 
                           :fieldColor="value.mbgFieldColor"
                           :fieldBGColor="value.mbgFieldBGColor"
-                      ></my-plan-field> 
+                      ></my-result-field> 
                 </my-plan-row-extern> 
                 <my-empty-row></my-empty-row>
               <my-divider></my-divider>
@@ -132,13 +132,13 @@
               </my-title-row>  
 
                 <my-global-row :ElementField="RowTitles[8].ElementText" :EndTextField="RowTitles[8].EndText">
-                          <my-plan-field 
+                          <my-result-field 
                           v-for="value in Row09FieldValues"
                           :key="value.id"
                           :fieldValue="value.mbgFieldValue" 
                           :fieldColor="value.mbgFieldColor"
                           :fieldBGColor="value.mbgFieldBGColor"
-                      ></my-plan-field> 
+                      ></my-result-field> 
                 </my-global-row>                
                 <my-empty-row></my-empty-row>
             </tbody>                  
@@ -194,17 +194,17 @@ export default {
             {
               id: "Row6",
               ElementText: "Anfangbestand",
-              EndText: "Anfangsbestand = Endbestand des Vormonats. Der Anfangsbestand fuer Januar wird ueber einen Parameter eingetragen."
+              EndText: ""
             },
             {
               id: "Row7",
               ElementText: "Endbestand",
-              EndText: "Erechnet sich aus Anfangsbestand + Zugang - Abgang."
+              EndText: ""
             },
             {
               id: "Row8",
               ElementText: "Kundenzuwachs",
-              EndText: "Wird durch Sales unabhaengig von diesem Planungs-Sheet geplant."
+              EndText: ""
             },
             {
               id: "Row9",

@@ -14,6 +14,53 @@ const state = {
  PL01_PST01_Row9_Active: false,    
 
 // Sheet01 - Allgemeine Kredite - Bestandsplanung
+Pl01_PST01_RowTitles: [
+    {
+      id: "Row1",
+      ElementText: "Default",
+      EndText: "Controlling-Vorgabe"
+    },
+    {
+      id: "Row2",
+      ElementText: "Goal",
+      EndText: "Board-Vorgabe"
+    },
+    {
+      id: "Row3",
+      ElementText: "Match (1:1)",
+      EndText: "Bitte mit BU-Manager PaPM abstimmen"
+    },
+    {
+      id: "Row4",
+      ElementText: "Zugang",
+      EndText: ""
+    },
+    {
+      id: "Row5",
+      ElementText: "Abgang",
+      EndText: ""
+    },
+    {
+      id: "Row6",
+      ElementText: "Anfangbestand",
+      EndText: ""
+    },
+    {
+      id: "Row7",
+      ElementText: "Endbestand",
+      EndText: ""
+    },
+    {
+      id: "Row8",
+      ElementText: "Kundenzuwachs",
+      EndText: ""
+    },
+    {
+      id: "Row9",
+      ElementText: "Forecast Allg.Kredite",
+      EndText: "wird maschinell prognostiziert."
+    }
+  ],
     // Row-Master Data
     PL01_PST01: [ 
         { 
