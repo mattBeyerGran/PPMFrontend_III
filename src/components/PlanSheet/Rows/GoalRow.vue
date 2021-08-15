@@ -8,7 +8,7 @@
                 
         <td class="text-start font-weight-light ppmDarkTextColor--text ppmTabsBGColor">
           <v-icon v-show="isUpload" dark color="ppmPlanElementColor" class="mr-4" >
-            mdi-upload-outline</v-icon>{{ EndTextField }}
+            mdi-arrow-up-thin-circle-outline</v-icon>{{ EndTextField }}
         </td>
     </tr>    
 </template>

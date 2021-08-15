@@ -23,7 +23,9 @@ import mbgGlobalRow from './components/PlanSheet/Rows/GlobalRow.vue'
 import mbgCalcRow from './components/PlanSheet/Rows/CalcRow.vue'
 import mbgDivider from './components/PlanSheet/Rows/DividerRow.vue'
 import mbgEmptyRow from './components/PlanSheet/Rows/EmptyRow.vue'
+import mbgEmptyRow4 from './components/PlanSheet/Rows/EmptyRow4.vue'
 import mbgTitleRow from './components/PlanSheet/Rows/TitleRow.vue'
+import mbgTitleRow4 from './components/PlanSheet/Rows/TitleRow4.vue'
 import mbgValueField from './components/PlanSheet/Fields/ValueField.vue'
 import mbgPlanField from './components/PlanSheet/Fields/PlanField.vue'
 import mbgResultField from './components/PlanSheet/Fields/ResultField.vue'
@@ -43,7 +45,9 @@ Vue.component('my-global-row', mbgGlobalRow);
 Vue.component('my-calc-row', mbgCalcRow);
 Vue.component('my-divider', mbgDivider);
 Vue.component('my-empty-row', mbgEmptyRow);
+Vue.component('my-empty-row4', mbgEmptyRow4);
 Vue.component('my-title-row', mbgTitleRow);
+Vue.component('my-title-row4', mbgTitleRow4);
 Vue.component('my-value-field', mbgValueField);
 Vue.component('my-plan-field', mbgPlanField);
 Vue.component('my-result-field', mbgResultField);

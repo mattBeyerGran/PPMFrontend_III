@@ -3,7 +3,7 @@
         <td class="text-start  ppmDarkTextColor--text ppmTabsBGColor title">
            {{ ElementField }}
         </td>    
-        <td class="text-center font-weight-light text-small ppmTabsBGColor ppmDarkTextColor--text" >{{ColumnText}}</td>
+        <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
         <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>  
         <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>
         <td class="text-center font-weight-light ppmTabsBGColor ppmDarkTextColor--text">{{ColumnText}}</td>

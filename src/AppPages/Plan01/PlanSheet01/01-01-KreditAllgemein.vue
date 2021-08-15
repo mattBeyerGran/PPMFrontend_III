@@ -33,7 +33,7 @@
                       ></my-result-field> 
                 </my-calc-row>  
 <!-- PlanRow 1 -->
-              <my-plan-row :ElementField="RowTitles[3].ElementText" v-bind:isParallel="true" v-bind:isGoal="false" v-bind:isMatch="false" v-bind:isReload="true" v-bind:isOK="true">
+              <my-plan-row :ElementField="RowTitles[3].ElementText" v-bind:isParallel="true" v-bind:isReload="true" v-bind:isOK="true">
                           <my-plan-field 
                           v-for="value in Row04FieldValues"
                           :key="value.id"
@@ -70,7 +70,7 @@
                                   ></my-value-field> 
                             </my-match-row>
 <!-- PlanRow 2 -->
-                <my-plan-row :ElementField="RowTitles[4].ElementText" v-bind:isParallel="true" v-bind:isGoal="false" v-bind:isMatch="false" v-bind:isReload="true" v-bind:isOK="true">
+                <my-plan-row :ElementField="RowTitles[4].ElementText" v-bind:isParallel="true" v-bind:isReload="true" v-bind:isOK="true">
                           <my-plan-field 
                           v-for="value in Row05FieldValues"
                           :key="value.id"

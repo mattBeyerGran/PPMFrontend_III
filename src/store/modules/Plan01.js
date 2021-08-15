@@ -1,147 +1,176 @@
 // **********************************************
-// *  Plan01: Geschäftsplan                     *
+// *  Plan01: Geschaeftsplan                    *
 // *  Module: "Plan01.js"                       *
 // **********************************************
 import * as types from '../types';
 
 const state = {
     
- // Row Active Status
- PL01_PST01_Row4_Active: false, 
- PL01_PST01_Row5_Active: false, 
- PL01_PST01_Row6_Active: false, 
- PL01_PST01_Row8_Active: false, 
- PL01_PST01_Row9_Active: false,    
-
-// Sheet01 - Allgemeine Kredite - Bestandsplanung
-Pl01_PST01_RowTitles: [
-    {
-      id: "Row1",
-      ElementText: "Default",
-      EndText: "Controlling-Vorgabe"
-    },
-    {
-      id: "Row2",
-      ElementText: "Goal",
-      EndText: "Board-Vorgabe"
-    },
-    {
-      id: "Row3",
-      ElementText: "Match (1:1)",
-      EndText: "Bitte mit BU-Manager PaPM abstimmen"
-    },
-    {
-      id: "Row4",
-      ElementText: "Zugang",
-      EndText: ""
-    },
-    {
-      id: "Row5",
-      ElementText: "Abgang",
-      EndText: ""
-    },
-    {
-      id: "Row6",
-      ElementText: "Anfangbestand",
-      EndText: ""
-    },
-    {
-      id: "Row7",
-      ElementText: "Endbestand",
-      EndText: ""
-    },
-    {
-      id: "Row8",
-      ElementText: "Kundenzuwachs",
-      EndText: ""
-    },
-    {
-      id: "Row9",
-      ElementText: "Forecast Allg.Kredite",
-      EndText: "wird maschinell prognostiziert."
-    }
-  ],
-    // Row-Master Data
-    PL01_PST01: [ 
-        { 
-            RowID: '01_01_01', 
-            RowType: 'TitleRow',
-            PlanItem: '',
-            Text: 'Bestandsveraenderung in Mio.',
-            Unit: 'Euro',
-            Edit: false,
-            Goal: false,
-            Match: false,
-            Active: true
-        },
-        { 
-            RowID: '01_01_02', 
-            RowType: 'CalcRow',
-            PlanItem: '',
-            Text: 'Anfangsbestand',
-            Unit: 'Euro',
-            Edit: false,
-            Goal: false,
-            Match: false,
-            Active: true
-        },
-        { 
-            RowID: '01_01_03', 
-            RowType: 'PlanRow',
-            PlanItem: '',
-            Text: 'Anfangsbestand',
-            Unit: 'Euro',
-            Edit: true,
-            Goal: true,
-            Match: true,
-            Active: true
-        }
-
-       
+// Plan02 Parameter - Hypotheken - Bestandsplanung (Parameter sind uebergreifend fuer alle Sheets)
+    Parameter_02: [
+        { ParId: "01", ParName: "MWST", ParValue: 0.0, ParUnit: "%"  },
+        { ParId: "02", ParName: "VWK-Zuschlag", ParValue: 5.0, ParUnit: "%"  }
     ],
+
+// Plan02 Sheet01 - Hypotheken - Bestandsplanung
+Data_0201: [
     
-    // Row-Daten
-    PL01_PST01_Data: [
-        ['RowID', 'Per01', 'Per02', 'Per03', 'Per04', 'Per05', 'Per06', 'Per07', 'Per08', 'Per09', 'Per10', 'Per11', 'Per12'],
-        ['01_01_01', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_02', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_03', 12, 15, 25, 24, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_04', 14, 14, 16, 16, 16, 15, 14, 12, 12, 13, 14, 12 ],
-        ['01_01_05', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_06', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_07', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_08', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_09', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_10', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_11', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_12', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_13', 4.5, 5, 5, 3, 2, 2.5, 3, 3.75, 4, 5, 5, 4 ],
-        ['01_01_14', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        ['01_01_15', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]     
-    ],
-    // Parameter
-    PL01_Parameter: [
-        ['ParameterID', 'Value', 'Unit', 'Name', 'Description'],
-        ['PL01_Par01', 210, 'Mio. Euro', 'Vorjahresmonat', 'Startwert fuer die Bestandsberechnung']
-    ] 
+        {
+            id: 'Row01',
+            isActive: true,
+            RowType: "TitleRow",
+            areChildsOpen: false,
+            ElementText: "Bestandsveränderung",           
+            Value01: null, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+            Value02: null, Unit02: "Euro", Color02: '#182F6D', BGColor02: '#E8F0F7',
+            Value03: null, Unit03: "Euro", Color03: '#182F6D', BGColor03: '#E8F0F7',
+            Value04: null, Unit04: "Euro", Color04: '#182F6D', BGColor04: '#E8F0F7',  
+            EndText: "in Mio."         
+        },
+        {
+            id: 'Row02',
+            isActive: true,
+            RowType: "CalcRow",
+            areChildsOpen: false,
+            ElementText: "Anfangsbestand",
+            Value01: 100.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+            Value02: 0.00, Unit02: "Euro", Color02: '#182F6D', BGColor02: '#E8F0F7',
+            Value03: 0.00, Unit03: "Euro", Color03: '#182F6D', BGColor03: '#E8F0F7',
+            Value04: 75.28, Unit04: "Euro", Color04: '#182F6D', BGColor04: '#E8F0F7',
+            EndText: ""         
+        },
+        {
+            id: 'Row03',
+            isActive: true,
+            RowType: "PlanRow",
+            areChildsOpen: false,
+            ElementText: "Zugang",
+            Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#FFFFFF',
+            Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#B9F6CA',
+            Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#FFCDD2',
+            Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#FFF9C4',
+            EndText: ""         
+        },
+        {
+                id: 'Row0301',
+                isActive: true,
+                RowType: "GoalRow",
+                areChildsOpen: false,
+                ElementText: "Default",
+                Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+                Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#E8F0F7',
+                Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#E8F0F7',
+                Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#E8F0F7',
+                EndText: "Controlling-Vorgabe"         
+        },
+        {
+                id: 'Row0302',
+                isActive: true,
+                RowType: "GoalRow",
+                areChildsOpen: false,
+                ElementText: "Goal",
+                Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+                Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#E8F0F7',
+                Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#E8F0F7',
+                Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#E8F0F7',
+                EndText: "Board-Vorgabe"         
+        },
+        {
+                id: 'Row0303',
+                isActive: true,
+                RowType: "MatchRow",
+                areChildsOpen: false,
+                ElementText: "MatchRow (1:1)",
+                Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+                Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#E8F0F7',
+                Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#E8F0F7',
+                Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#E8F0F7',
+                EndText: "mit Christoph abstimmen"         
+        },
+        {
+            id: 'Row04',
+            isActive: true,
+            RowType: "PlanRow",
+            areChildsOpen: false,
+            ElementText: "Abgang",
+            Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#FFFFFF',
+            Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#B9F6CA',
+            Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#FFCDD2',
+            Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#FFF9C4',
+            EndText: ""         
+        },
+        {
+                id: 'Row0401',
+                isActive: true,
+                RowType: "GoalRow",
+                areChildsOpen: false,
+                ElementText: "Default",
+                Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+                Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#E8F0F7',
+                Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#E8F0F7',
+                Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#E8F0F7',
+                EndText: "Controlling-Vorgabe"         
+        },
+        {
+                id: 'Row0402',
+                isActive: true,
+                RowType: "GoalRow",
+                areChildsOpen: false,
+                ElementText: "Goal",
+                Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+                Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#E8F0F7',
+                Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#E8F0F7',
+                Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#E8F0F7',
+                EndText: "Board-Vorgabe"         
+        },
+        {
+            id: 'Row05',
+            isActive: true,
+            RowType: "CalcRow",
+            areChildsOpen: false,
+            ElementText: "Endbestand",
+            Value01: 628.26, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+            Value02: 628.26, Unit02: "Euro", Color02: '#182F6D', BGColor02: '#E8F0F7',
+            Value03: 0.00, Unit03: "Euro", Color03: '#182F6D', BGColor03: '#E8F0F7',
+            Value04: 75.28, Unit04: "Euro", Color04: '#182F6D', BGColor04: '#E8F0F7',
+            EndText: ""         
+        }
+    
+]
 };
 // getters
 const getters = {
-    [types.Get_01_01_ROW04_ACTIVE]: state => {
-        return state.PL01_PST01_Row4_Active;
+    getRow01: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row01")
     },
-    [types.Get_01_01_ROW05_ACTIVE]: state => {
-        return state.PL01_PST01_Row5_Active;
+    getRow02: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row02")
     },
-    [types.Get_01_01_ROW06_ACTIVE]: state => {
-        return state.PL01_PST01_Row6_Active;
+    getRow03: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row03")
     },
-    [types.Get_01_01_ROW08_ACTIVE]: state => {
-        return state.PL01_PST01_Row8_Active;
+    getRow0301: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row0301")
     },
-    [types.Get_01_01_ROW09_ACTIVE]: state => {
-        return state.PL01_PST01_Row9_Active;
+    getRow0302: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row0302")
+    },
+    getRow0303: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row0303")
+    },
+    getRow04: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row04")
+    },
+    getRow0401: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row0401")
+    },
+    getRow0402: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row0402")
+    },
+    getRow05: (state) =>  {
+        return state.Data_0201.find(row => row.id === "Row05")
     }
+    
 };
 // actions
 const actions = {
@@ -167,6 +196,16 @@ const mutations = {
     [types.PL01PST01ROW06_MUTATE_ACTIVE]: ( state ) => {
         state.PL01_PST01_Row8_Active = !state.PL01_PST01_Row8_Active;
         state.PL01_PST01_Row9_Active = !state.PL01_PST01_Row9_Active;   
+    },
+
+    showCildsRow03: ( state ) => {
+        state.Data_0201[3].isActive = !state.Data_0201[3].isActive;
+        state.Data_0201[4].isActive = !state.Data_0201[4].isActive;
+        state.Data_0201[5].isActive = !state.Data_0201[5].isActive;      
+    },
+    showCildsRow04: ( state ) => {
+        state.Data_0201[7].isActive = !state.Data_0201[7].isActive;
+        state.Data_0201[8].isActive = !state.Data_0201[8].isActive;
     }
 };
 export default {
