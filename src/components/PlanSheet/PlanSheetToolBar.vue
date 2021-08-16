@@ -17,10 +17,10 @@
           Parameter
       </v-btn>
        
-      <v-btn color="ppmTopBarTextColor" text dark @click="setAlert" >
+      <!-- <v-btn color="ppmTopBarTextColor" text dark @click="setAlert" >
           <v-icon left dark color="ppmPlanElementColor" >mdi-refresh-circle</v-icon>  
           Refresh          
-      </v-btn>
+      </v-btn> -->
     </v-toolbar> 
     <v-alert v-model="alert"
       dense

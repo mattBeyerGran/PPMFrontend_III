@@ -107,5 +107,7 @@ new Vue({
   created(){
     // execute me query
     this.$store.dispatch('me');
+    // eslint-disable-next-line no-console
+    console.log('created');
   }
 }).$mount('#app')

@@ -2,7 +2,7 @@
 // *  Plan01: Geschaeftsplan                    *
 // *  Module: "Plan01.js"                       *
 // **********************************************
-import * as types from '../types';
+// import * as types from '../types';
 
 const state = {
     
@@ -11,6 +11,7 @@ const state = {
         { ParId: "01", ParName: "MWST", ParValue: 0.0, ParUnit: "%"  },
         { ParId: "02", ParName: "VWK-Zuschlag", ParValue: 5.0, ParUnit: "%"  }
     ],
+    
 
 // Plan02 Sheet01 - Hypotheken - Bestandsplanung
 Data_0201: [
@@ -34,7 +35,7 @@ Data_0201: [
             areChildsOpen: false,
             ElementText: "Anfangsbestand",
             Value01: 100.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
-            Value02: 0.00, Unit02: "Euro", Color02: '#182F6D', BGColor02: '#E8F0F7',
+            Value02: 10.00, Unit02: "Euro", Color02: '#182F6D', BGColor02: '#E8F0F7',
             Value03: 0.00, Unit03: "Euro", Color03: '#182F6D', BGColor03: '#E8F0F7',
             Value04: 75.28, Unit04: "Euro", Color04: '#182F6D', BGColor04: '#E8F0F7',
             EndText: ""         
@@ -45,15 +46,15 @@ Data_0201: [
             RowType: "PlanRow",
             areChildsOpen: false,
             ElementText: "Zugang",
-            Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#FFFFFF',
-            Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#B9F6CA',
-            Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#FFCDD2',
-            Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#FFF9C4',
+            Value01: 10.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#FFFFFF',
+            Value02: 25.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#B9F6CA',
+            Value03: 22.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#FFCDD2',
+            Value04: 10.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#FFF9C4',
             EndText: ""         
         },
         {
                 id: 'Row0301',
-                isActive: true,
+                isActive: false,
                 RowType: "GoalRow",
                 areChildsOpen: false,
                 ElementText: "Default",
@@ -65,7 +66,7 @@ Data_0201: [
         },
         {
                 id: 'Row0302',
-                isActive: true,
+                isActive: false,
                 RowType: "GoalRow",
                 areChildsOpen: false,
                 ElementText: "Goal",
@@ -77,7 +78,7 @@ Data_0201: [
         },
         {
                 id: 'Row0303',
-                isActive: true,
+                isActive: false,
                 RowType: "MatchRow",
                 areChildsOpen: false,
                 ElementText: "MatchRow (1:1)",
@@ -93,15 +94,15 @@ Data_0201: [
             RowType: "PlanRow",
             areChildsOpen: false,
             ElementText: "Abgang",
-            Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#FFFFFF',
-            Value02: 0.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#B9F6CA',
-            Value03: 0.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#FFCDD2',
-            Value04: 0.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#FFF9C4',
+            Value01: 13.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#FFFFFF',
+            Value02: 15.00, Unit02: "Euro", Color02: '#3CB283', BGColor02: '#B9F6CA',
+            Value03: 5.00, Unit03: "Euro", Color03: '#F44336', BGColor03: '#FFCDD2',
+            Value04: 12.00, Unit04: "Euro", Color04: '#D08B01', BGColor04: '#FFF9C4',
             EndText: ""         
         },
         {
                 id: 'Row0401',
-                isActive: true,
+                isActive: false,
                 RowType: "GoalRow",
                 areChildsOpen: false,
                 ElementText: "Default",
@@ -113,7 +114,7 @@ Data_0201: [
         },
         {
                 id: 'Row0402',
-                isActive: true,
+                isActive: false,
                 RowType: "GoalRow",
                 areChildsOpen: false,
                 ElementText: "Goal",
@@ -129,10 +130,10 @@ Data_0201: [
             RowType: "CalcRow",
             areChildsOpen: false,
             ElementText: "Endbestand",
-            Value01: 628.26, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
-            Value02: 628.26, Unit02: "Euro", Color02: '#182F6D', BGColor02: '#E8F0F7',
+            Value01: 0.00, Unit01: "Euro", Color01: '#182F6D', BGColor01: '#E8F0F7',
+            Value02: 0.00, Unit02: "Euro", Color02: '#182F6D', BGColor02: '#E8F0F7',
             Value03: 0.00, Unit03: "Euro", Color03: '#182F6D', BGColor03: '#E8F0F7',
-            Value04: 75.28, Unit04: "Euro", Color04: '#182F6D', BGColor04: '#E8F0F7',
+            Value04: 0.00, Unit04: "Euro", Color04: '#182F6D', BGColor04: '#E8F0F7',
             EndText: ""         
         }
     
@@ -172,32 +173,9 @@ const getters = {
     }
     
 };
-// actions
-const actions = {
-    [types.PL01PST01ROW04_TOGGLE_ACTIVE]: ({ commit } ) => {
-        commit(types.PL01PST01ROW04_MUTATE_ACTIVE);
-    },
-    [types.PL01PST01ROW05_TOGGLE_ACTIVE]: ({ commit }) => {
-        commit(types.PL01PST01ROW05_MUTATE_ACTIVE);
-    }
-
-};
 // mutations
 const mutations = {
-    [types.PL01PST01ROW04_MUTATE_ACTIVE]: ( state ) => {
-        state.PL01_PST01_Row4_Active = !state.PL01_PST01_Row4_Active;
-        state.PL01_PST01_Row5_Active = !state.PL01_PST01_Row5_Active;
-       
-    },
-    [types.PL01PST01ROW05_MUTATE_ACTIVE]: ( state ) => {
-        state.PL01_PST01_Row6_Active = !state.PL01_PST01_Row6_Active;
-       
-    },
-    [types.PL01PST01ROW06_MUTATE_ACTIVE]: ( state ) => {
-        state.PL01_PST01_Row8_Active = !state.PL01_PST01_Row8_Active;
-        state.PL01_PST01_Row9_Active = !state.PL01_PST01_Row9_Active;   
-    },
-
+    
     showCildsRow03: ( state ) => {
         state.Data_0201[3].isActive = !state.Data_0201[3].isActive;
         state.Data_0201[4].isActive = !state.Data_0201[4].isActive;
@@ -206,6 +184,22 @@ const mutations = {
     showCildsRow04: ( state ) => {
         state.Data_0201[7].isActive = !state.Data_0201[7].isActive;
         state.Data_0201[8].isActive = !state.Data_0201[8].isActive;
+    },
+    setResults: ( state ) => {
+        state.Data_0201[9].Value01 = state.Data_0201[1].Value01 + state.Data_0201[2].Value01 - state.Data_0201[6].Value01;
+        state.Data_0201[1].Value02 = state.Data_0201[9].Value01;
+        state.Data_0201[9].Value02 = state.Data_0201[1].Value02 + state.Data_0201[2].Value02 - state.Data_0201[6].Value02;
+        state.Data_0201[1].Value03 = state.Data_0201[9].Value02;
+        state.Data_0201[9].Value03 = state.Data_0201[1].Value03 + state.Data_0201[2].Value03 - state.Data_0201[6].Value03;
+        state.Data_0201[1].Value04 = state.Data_0201[9].Value03;
+        state.Data_0201[9].Value04 = state.Data_0201[1].Value04 + state.Data_0201[2].Value04 - state.Data_0201[6].Value04;  
+    }
+};
+// actions
+const actions = {
+    
+    ResultAction: ({ commit }) => {
+        commit('setResults')
     }
 };
 export default {

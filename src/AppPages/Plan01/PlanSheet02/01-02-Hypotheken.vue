@@ -114,6 +114,19 @@ export default {
       'getRow05'
       
     ])
+  },
+  created: function(){
+    // eslint-disable-next-line no-console
+      console.log('created');
+      this.$store.dispatch('ResultAction');
+      
+    
+  },
+  updated: function(){
+    // eslint-disable-next-line no-console
+      console.log('updated');
+      
+    
   }
 }
 </script>
