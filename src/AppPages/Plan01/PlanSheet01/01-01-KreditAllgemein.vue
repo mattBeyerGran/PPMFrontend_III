@@ -113,8 +113,7 @@
 <!-- Zusatzinformationen -->
                 <my-title-row ElementField="Zusatzinformationen" ColumnText="" EndTextField="">
               </my-title-row> 
-              <my-title-row ElementField="" ColumnText="%" EndTextField="">
-              </my-title-row>  
+               
 
                 <my-plan-row-extern :ElementField="RowTitles[7].ElementText" :EndTextField="RowTitles[7].EndText">
                           <my-result-field 
@@ -125,11 +124,9 @@
                           :fieldBGColor="value.mbgFieldBGColor"
                       ></my-result-field> 
                 </my-plan-row-extern> 
-                <my-empty-row></my-empty-row>
-              <my-divider></my-divider>
-              <my-empty-row></my-empty-row>
-                <my-title-row ElementField="" ColumnText="Euro" EndTextField="in Mio.">
-              </my-title-row>  
+               
+            
+            
 
                 <my-global-row :ElementField="RowTitles[8].ElementText" :EndTextField="RowTitles[8].EndText">
                           <my-result-field 
@@ -204,12 +201,12 @@ export default {
             {
               id: "Row8",
               ElementText: "Kundenzuwachs",
-              EndText: ""
+              EndText: "in %"
             },
             {
               id: "Row9",
               ElementText: "Forecast Allg.Kredite",
-              EndText: "wird maschinell prognostiziert."
+              EndText: "in Mio. Euro"
             }
           ],
           Row01FieldValues: [

@@ -14,7 +14,7 @@ import mbgPlanSheetToolBar from './components/PlanSheet/PlanSheetToolBar.vue'
 import mbgTableHeaderMonate from './components/PlanSheet/TableHeaderMonate.vue'
 import mbgTableHeaderQuartale from './components/PlanSheet/TableHeaderQuartale.vue'
 import mbgTableHeader5Jahre from './components/PlanSheet/TableHeader5Jahre.vue'
-import mbgBasisRow from './components/PlanSheet/Rows/BasisRow.vue'
+import mbgRow from './components/PlanSheet/Rows/Row.vue'
 import mbgGoalRow from './components/PlanSheet/Rows/GoalRow.vue'
 import mbgMatchRow from './components/PlanSheet/Rows/MatchRow.vue'
 import mbgPlanRow from './components/PlanSheet/Rows/PlanRow.vue'
@@ -26,9 +26,17 @@ import mbgEmptyRow from './components/PlanSheet/Rows/EmptyRow.vue'
 import mbgEmptyRow4 from './components/PlanSheet/Rows/EmptyRow4.vue'
 import mbgTitleRow from './components/PlanSheet/Rows/TitleRow.vue'
 import mbgTitleRow4 from './components/PlanSheet/Rows/TitleRow4.vue'
+import mbgActionField from './components/PlanSheet/Fields/ActionField.vue'
+import mbgTextField from './components/PlanSheet/Fields/TextField.vue'
 import mbgValueField from './components/PlanSheet/Fields/ValueField.vue'
 import mbgPlanField from './components/PlanSheet/Fields/PlanField.vue'
 import mbgResultField from './components/PlanSheet/Fields/ResultField.vue'
+import mbgElementField from './components/PlanSheet/Fields/ElementField.vue'
+import mbgElementCalcField from './components/PlanSheet/Fields/ElementCalcField.vue'
+import mbgElementPlanField from './components/PlanSheet/Fields/ElementPlanField.vue'
+import mbgElementGoalField from './components/PlanSheet/Fields/ElementGoalField.vue'
+import mbgElementMatchField from './components/PlanSheet/Fields/ElementMatchField.vue'
+import mbgElementInfoDialog from './components/Dialogs/ElementInfo.vue'
 
 
 Vue.component('my-plan-head', mbgPlanHead);
@@ -36,7 +44,7 @@ Vue.component('my-plan-sheet-tool-bar', mbgPlanSheetToolBar);
 Vue.component('my-table-header-monate', mbgTableHeaderMonate);
 Vue.component('my-table-header-quartale', mbgTableHeaderQuartale);
 Vue.component('my-table-header-5jahre', mbgTableHeader5Jahre);
-Vue.component('my-basis-row', mbgBasisRow);
+Vue.component('my-row', mbgRow);
 Vue.component('my-goal-row', mbgGoalRow);
 Vue.component('my-match-row', mbgMatchRow);
 Vue.component('my-plan-row', mbgPlanRow);
@@ -48,9 +56,17 @@ Vue.component('my-empty-row', mbgEmptyRow);
 Vue.component('my-empty-row4', mbgEmptyRow4);
 Vue.component('my-title-row', mbgTitleRow);
 Vue.component('my-title-row4', mbgTitleRow4);
+Vue.component('my-action-field', mbgActionField);
+Vue.component('my-text-field', mbgTextField);
 Vue.component('my-value-field', mbgValueField);
 Vue.component('my-plan-field', mbgPlanField);
 Vue.component('my-result-field', mbgResultField);
+Vue.component('my-element-field', mbgElementField);
+Vue.component('my-element-calc-field', mbgElementCalcField);
+Vue.component('my-element-plan-field', mbgElementPlanField);
+Vue.component('my-element-goal-field', mbgElementGoalField);
+Vue.component('my-element-match-field', mbgElementMatchField);
+Vue.component('my-element-info-dialog', mbgElementInfoDialog);
 
 
 

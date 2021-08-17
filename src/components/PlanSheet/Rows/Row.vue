@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: "my-basis-row",
+  name: "my-plan-sheet-row",
 }
 </script>

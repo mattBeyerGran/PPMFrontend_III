@@ -1,8 +1,8 @@
 <template >
     <tr>        
         <td class="text-start  ppmDarkTextColor--text ppmTabsBGColor subtitle-1">
-          <v-icon dark color="ppmParameterColor" class="mr-2" >mdi-calculator-variant</v-icon>
-              {{ ElementField }}
+          <v-icon dark color="ppmParameterColor" class="mr-2"  >mdi-calculator-variant</v-icon>
+              {{ ElementField }}              
         </td>    
           <slot></slot> 
                 
@@ -16,6 +16,7 @@ export default {
   props: {    
       ElementField: { type: String, required: true },
       EndTextField: { type: String, required: false },
+     
   }
 }
 </script>

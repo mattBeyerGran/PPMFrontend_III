@@ -9,7 +9,7 @@
     </v-btn>
 
     <v-dialog
-      v-model="dialog"
+      v-model="this.$store.state.InfoDialog"
       max-width="290"
     >
       <v-card>
