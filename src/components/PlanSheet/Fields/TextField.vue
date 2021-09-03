@@ -1,7 +1,21 @@
 <template>
-  <td class="text-start font-weight-light" v-bind:style="{color: textColor, backgroundColor: textBGColor, borderColor: textBGColor}">
-       <v-icon v-show="isUpload" dark color="ppmPlanElementColor" class="mr-4"  @click="copyRow" >mdi-arrow-up-thin-circle-outline</v-icon>
-        {{ text }} 
+  <td 
+    id="textfield"
+    class="text-start font-weight-light" 
+    v-bind:style="{color: textColor, backgroundColor: textBGColor, borderColor: textBGColor}"
+    >
+       <v-icon 
+          v-show="isUpload" 
+          dark 
+          color="ppmPlanElementColor" 
+          class="mr-4"  
+          @click="copyRow" 
+        >
+          mdi-arrow-up-thin-circle-outline
+        </v-icon>
+      
+          {{ text }} 
+       
   </td>
            
 </template>
@@ -22,3 +36,9 @@ export default {
   }
 }
 </script>
+<style>
+  #textfield {
+    min-width: 220px;
+    max-width: 220px;
+  }
+</style>

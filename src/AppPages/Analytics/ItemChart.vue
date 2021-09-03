@@ -1,17 +1,15 @@
 <template>
   
-  <v-container >
-    <div class="pa-12 ppmTabsBGColor">
-        <GChart
+  <v-container>
+    
+     <GChart
           class="pt-5"
-          :settings="{ packages: ['corechart', 'gantt', 'table'], 'language': 'de'}"
+          :settings="{ packages: ['corechart', 'gantt', 'table'] }"
           type="Gantt"                 
           :data="ganttData"
           :options="ganttOptions"
           ref="gChart"         
-        />   
-    </div>
-       
+        />     
   </v-container>
     
   
@@ -25,7 +23,8 @@ export default {
   name: 'Patienten',
   created(){
    /*  this.handleGetPatients(); */
-       
+    
+   
   },
   updated(){
    /*  this.handleGetPatients(); */
@@ -56,7 +55,6 @@ export default {
   },
   computed: {
         
-    
   },
   methods: {
       daysToMilliseconds(days) {

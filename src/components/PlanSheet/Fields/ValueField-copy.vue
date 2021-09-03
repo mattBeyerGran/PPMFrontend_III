@@ -1,7 +1,5 @@
 <template>
-    <td  class="text-end ppmTabsBGColor" >
-      <input id="planfield" disabled type="number" :value="fieldValue" v-bind:style="{color: fieldColor, backgroundColor: fieldBGColor, borderColor: fieldBGColor}">
-    </td>
+    <td  class="text-end" v-bind:style="{color : fieldColor, backgroundColor : fieldBGColor, borderColor: fieldBGColor}">{{fieldValue}}</td>
 </template>
 <script>
 export default {
