@@ -33,15 +33,17 @@
                   <my-result-field :fieldValue="getRow02.Value04" :fieldColor="getRow02.Color04" :fieldBGColor="getRow02.BGColor04"></my-result-field>  
                   <my-text-field :isUpload="false" :text="getRow02.EndText" :textColor="getRow02.TextColor" :textBGColor="getRow02.TextBGColor"></my-text-field>
               </my-row>
-              <!-- Zugang - Planung -->
+              <!-- Zugang - Planung  #### Neu -->
               <my-row v-show="getRow03.isActive" >
-                  <my-element-plan-field :ElementTitle="getRow03.ElementTitle" :ElementText="getRow03.ElementText" :fieldColor="getRow03.ElementColor" :fieldBGColor="getRow03.ElementBGColor"></my-element-plan-field>
-                  <my-plan-field :fieldValue="getRow03.Value01" :fieldColor="getRow03.Color01" :fieldBGColor="getRow03.BGColor01"></my-plan-field>
-                  <my-plan-field :fieldValue="getRow03.Value02" :fieldColor="getRow03.Color02" :fieldBGColor="getRow03.BGColor02"></my-plan-field> 
-                  <my-plan-field :fieldValue="getRow03.Value03" :fieldColor="getRow03.Color03" :fieldBGColor="getRow03.BGColor03"></my-plan-field> 
-                  <my-plan-field :fieldValue="getRow03.Value04" :fieldColor="getRow03.Color04" :fieldBGColor="getRow03.BGColor04"></my-plan-field>  
+                  <my-element-plan-field  :ElementTitle="getRow03.ElementTitle" :ElementText="getRow03.ElementText" :fieldColor="getRow03.ElementColor" :fieldBGColor="getRow03.ElementBGColor"></my-element-plan-field>
+                  <my-plan-field :fieldRow=3  :fieldColumn=1 :fieldColor="getRow03.Color01" :fieldBGColor="getRow03.BGColor01"></my-plan-field>
+                  <my-plan-field :fieldRow=3  :fieldColumn=2 :fieldColor="getRow03.Color02" :fieldBGColor="getRow03.BGColor02"></my-plan-field> 
+                  <my-plan-field :fieldRow=3  :fieldColumn=3 :fieldColor="getRow03.Color03" :fieldBGColor="getRow03.BGColor03"></my-plan-field> 
+                  <my-plan-field :fieldRow=3  :fieldColumn=4 :fieldColor="getRow03.Color04" :fieldBGColor="getRow03.BGColor04"></my-plan-field>  
                   <my-action-field :actionBGColor="getRow03.ActionBGColor" :isParallel="true" :isReload="true" :isOK="true" showChilds="showCildsRow03" resetData="resetRow03"></my-action-field>
               </my-row>
+              
+               
                     <my-row v-show="getRow0301.isActive" >
                           <my-element-goal-field :ElementTitle="getRow0301.ElementTitle" :ElementText="getRow0301.ElementText" :fieldColor="getRow0301.ElementColor" :fieldBGColor="getRow0301.ElementBGColor"></my-element-goal-field>
                           <my-value-field :fieldValue="getRow0301.Value01" :fieldColor="getRow0301.Color01" :fieldBGColor="getRow0301.BGColor01"></my-value-field>
@@ -66,13 +68,20 @@
                           <my-value-field :fieldValue="getRow0303.Value04" :fieldColor="getRow0303.Color04" :fieldBGColor="getRow0303.BGColor04"></my-value-field>  
                           <my-text-field :isUpload="true" copyToPlan="copyRow303onRow03" :text="getRow0303.EndText" :textColor="getRow0303.TextColor" :textBGColor="getRow0303.TextBGColor"></my-text-field>    
                     </my-row>
+                    <!-- Chart -->
+                    <my-row v-if="getChart03.isActive">
+                        <my-element-chart-field :ElementTitle="getChart03.ElementTitle" :ElementText="getChart03.ElementText" :fieldColor="getChart03.ElementColor" :fieldBGColor="getChart03.ElementBGColor"></my-element-chart-field>                         
+                        <my-chart-field :fieldColor="getChart03.ElementColor" fieldBGColor="#FFFFFF"></my-chart-field>
+                        <my-text-field :isUpload="false"  :text="getChart03.EndText" :textColor="getChart03.TextColor" :textBGColor="getChart03.TextBGColor"></my-text-field>    
+                    </my-row>
+                    <my-empty-row4 v-show="getChart03.isActive"></my-empty-row4> 
               <!-- Abgang - Planung --> 
               <my-row v-show="getRow04.isActive" >
                   <my-element-plan-field :ElementTitle="getRow04.ElementTitle" :ElementText="getRow04.ElementText" :fieldColor="getRow04.ElementColor" :fieldBGColor="getRow04.ElementBGColor"></my-element-plan-field>  
-                  <my-plan-field :fieldValue="getRow04.Value01" :fieldColor="getRow04.Color01" :fieldBGColor="getRow04.BGColor01"></my-plan-field>
-                  <my-plan-field :fieldValue="getRow04.Value02" :fieldColor="getRow04.Color02" :fieldBGColor="getRow04.BGColor02"></my-plan-field> 
-                  <my-plan-field :fieldValue="getRow04.Value03" :fieldColor="getRow04.Color03" :fieldBGColor="getRow04.BGColor03"></my-plan-field> 
-                  <my-plan-field :fieldValue="getRow04.Value04" :fieldColor="getRow04.Color04" :fieldBGColor="getRow04.BGColor04"></my-plan-field>  
+                  <my-plan-field :fieldRow=7  :fieldColumn=1 :fieldColor="getRow04.Color01" :fieldBGColor="getRow04.BGColor01"></my-plan-field>
+                  <my-plan-field :fieldRow=7  :fieldColumn=2 :fieldColor="getRow04.Color02" :fieldBGColor="getRow04.BGColor02"></my-plan-field> 
+                  <my-plan-field :fieldRow=7  :fieldColumn=3 :fieldColor="getRow04.Color03" :fieldBGColor="getRow04.BGColor03"></my-plan-field> 
+                  <my-plan-field :fieldRow=7  :fieldColumn=4 :fieldColor="getRow04.Color04" :fieldBGColor="getRow04.BGColor04"></my-plan-field>  
                   <my-action-field :actionBGColor="getRow04.ActionBGColor" :isParallel="true" :isReload="true" :isOK="true" showChilds="showCildsRow04" resetData="resetRow04"></my-action-field>
               </my-row >
                     <my-row v-show="getRow0401.isActive" >
@@ -100,22 +109,27 @@
                   <my-text-field :isUpload="false" :text="getRow05.EndText" :textColor="getRow05.TextColor" :textBGColor="getRow05.TextBGColor"></my-text-field>
               </my-row> 
               <my-empty-row4></my-empty-row4>
-             
+              
+              
+            
+              
+              
+
+
             </tbody>         
           <!-- </template> -->
         </v-simple-table>
     </v-container>
+    
   </v-container>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: "hypotheken",
-  components: {
-
-  },
+  
   computed: {
     plName() {
       return this.$store.getters.plannerName;
@@ -133,25 +147,36 @@ export default {
       'getRow04',
       'getRow0401',
       'getRow0402',
-      'getRow05'
+      'getRow05',
+      'getChart03'
+      
+    ])
+  },
+  methods: {
+    ...mapActions([
       
     ])
   },
   created: function(){   
       this.$store.dispatch('ResultAction');   
+     
   },
   updated: function(){  
       this.$store.dispatch('ResultAction');
+      
 
-      this.$store.dispatch('Row02Field01ColorTrigger');    
-      this.$store.dispatch('Row02Field02ColorTrigger'); 
-      this.$store.dispatch('Row02Field03ColorTrigger'); 
-      this.$store.dispatch('Row02Field04ColorTrigger'); 
+      this.$store.dispatch('Row03Field01ColorTrigger');    
+      this.$store.dispatch('Row03Field02ColorTrigger'); 
+      this.$store.dispatch('Row03Field03ColorTrigger'); 
+      this.$store.dispatch('Row03Field04ColorTrigger'); 
      
       this.$store.dispatch('Row06Field01ColorTrigger');    
       this.$store.dispatch('Row06Field02ColorTrigger'); 
       this.$store.dispatch('Row06Field03ColorTrigger'); 
       this.$store.dispatch('Row06Field04ColorTrigger'); 
+      
+     
+       
   }
 }
 </script>
