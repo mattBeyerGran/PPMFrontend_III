@@ -16,12 +16,10 @@
 <script>
 import { mapGetters } from 'vuex';
 export default {
-  name: "my-plan-field",
+  name: "my-ps0103-plan-field",
   props: {
       fieldRow: { type: String, required: false },
       fieldColumn: { type: Number, required: false },
-      // fieldColor: { type: String, required: false },
-      // fieldBGColor: { type: String, required: false },
   },
   computed: {
     ...mapGetters([

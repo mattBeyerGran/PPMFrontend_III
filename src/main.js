@@ -34,15 +34,11 @@ import mbgPlanField from './components/PlanSheet/Fields/PlanField.vue'
 import mbgChartField from './components/PlanSheet/Fields/ChartField.vue'
 import mbgInputField from './components/PlanSheet/Fields/InputField.vue'
 import mbgResultField from './components/PlanSheet/Fields/ResultField.vue'
-import mbgElementField from './components/PlanSheet/Fields/ElementField.vue'
-import mbgElementCalcField from './components/PlanSheet/Fields/ElementCalcField.vue'
-import mbgElementPlanField from './components/PlanSheet/Fields/ElementPlanField.vue'
-import mbgElementInputField from './components/PlanSheet/Fields/ElementInputField.vue'
-import mbgElementChartField from './components/PlanSheet/Fields/ElementChartField.vue'
 
-import mbgElementGoalField from './components/PlanSheet/Fields/ElementGoalField.vue'
-import mbgElementMatchField from './components/PlanSheet/Fields/ElementMatchField.vue'
-import mbgElementInfoDialog from './components/Dialogs/ElementInfo.vue'
+
+import mbgPS1030PlanField from './components/PlanSheet/Fields/PS0103PlanField.vue'
+import mbgPS1030ResultField from './components/PlanSheet/Fields/PS0103ResultField.vue'
+import ppmElementField from './components/PlanSheet/Fields/ppmElementField.vue'
 
 
 Vue.component('my-plan-head', mbgPlanHead);
@@ -70,16 +66,11 @@ Vue.component('my-plan-field', mbgPlanField);
 Vue.component('my-input-field', mbgInputField);
 Vue.component('my-chart-field', mbgChartField);
 Vue.component('my-result-field', mbgResultField);
-Vue.component('my-element-field', mbgElementField);
-Vue.component('my-element-calc-field', mbgElementCalcField);
-Vue.component('my-element-plan-field', mbgElementPlanField);
-Vue.component('my-element-input-field', mbgElementInputField);
-Vue.component('my-element-goal-field', mbgElementGoalField);
-Vue.component('my-element-match-field', mbgElementMatchField);
-Vue.component('my-element-info-dialog', mbgElementInfoDialog);
-Vue.component('my-element-chart-field', mbgElementChartField);
 
 
+Vue.component('my-ps0103-plan-field', mbgPS1030PlanField); 
+Vue.component('my-ps0103-result-field', mbgPS1030ResultField);
+Vue.component('my-ppm-element-field', ppmElementField);
 
 import VueGoogleCharts from 'vue-google-charts'
 

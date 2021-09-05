@@ -3,6 +3,8 @@ import Vuex from 'vuex';
 import router from '../router/index';
 import Plan01 from './modules/Plan01';
 import Plan02 from './modules/Plan02';
+import Plan0103 from './modules/Plan0103';
+import PlanStore from './modules/PlanStore';
 
 
 import { defaultClient as apolloClient } from '../main';
@@ -96,7 +98,9 @@ export default new Vuex.Store({
    
   },
   modules: {
+    PlanStore,
     Plan01,
-    Plan02
+    Plan02,
+    Plan0103
   }
 });

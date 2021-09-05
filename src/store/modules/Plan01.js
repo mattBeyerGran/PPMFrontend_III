@@ -252,9 +252,7 @@ Charts_0201: [
 
 // getters
 const getters = {
-    getRow: (state, payload) =>  {
-        return state.Data_0201.find(row => row.id === payload)
-    },getRow01: (state) =>  {
+    getRow01: (state) =>  {
         return state.Data_0201.find(row => row.id === "Row01")
     },
     getRow02: (state) =>  {
