@@ -48,11 +48,11 @@
               
                <my-row v-show="getRow('PS0103Row03').isActive" >
                   <my-ppm-element-field  fieldRow='PS0103Row03' iconType='PlanRow'></my-ppm-element-field>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row03Value01" :value="this.getRow('PS0103Row03').Value01" :textColor="this.getRow('PS0103Row03').Color01" :BGColor="this.getRow('PS0103Row03').BGColor01" size="18px" ></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row03Value02" :value="this.getRow('PS0103Row03').Value02" :textColor="this.getRow('PS0103Row03').Color02" :BGColor="this.getRow('PS0103Row03').BGColor02" size="18px"></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row03Value03" :value="this.getRow('PS0103Row03').Value03" :textColor="this.getRow('PS0103Row03').Color03" :BGColor="this.getRow('PS0103Row03').BGColor03" size="18px"></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row03Value04" :value="this.getRow('PS0103Row03').Value04" :textColor="this.getRow('PS0103Row03').Color04" :BGColor="this.getRow('PS0103Row03').BGColor04" size="18px"></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row03Value05" :value="this.getRow('PS0103Row03').Value05" :textColor="this.getRow('PS0103Row03').Color05" :BGColor="this.getRow('PS0103Row03').BGColor05" size="18px"></my-ppm-plan-field2>
+                  <my-ppm-plan-field action="updateFieldPS0103Row03Value01" :value="this.getRow('PS0103Row03').Value01" :textColor="this.getRow('PS0103Row03').Color01" :BGColor="this.getRow('PS0103Row03').BGColor01" size="18px" ></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row03Value02" :value="this.getRow('PS0103Row03').Value02" :textColor="this.getRow('PS0103Row03').Color02" :BGColor="this.getRow('PS0103Row03').BGColor02" size="18px"></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row03Value03" :value="this.getRow('PS0103Row03').Value03" :textColor="this.getRow('PS0103Row03').Color03" :BGColor="this.getRow('PS0103Row03').BGColor03" size="18px"></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row03Value04" :value="this.getRow('PS0103Row03').Value04" :textColor="this.getRow('PS0103Row03').Color04" :BGColor="this.getRow('PS0103Row03').BGColor04" size="18px"></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row03Value05" :value="this.getRow('PS0103Row03').Value05" :textColor="this.getRow('PS0103Row03').Color05" :BGColor="this.getRow('PS0103Row03').BGColor05" size="18px"></my-ppm-plan-field>
                   <my-ppm-action-field resetIcon fieldRow='PS0103Row03' showChilds='showChildsRow03' parallelIcon okIcon chartIcon graphic='showChart03'></my-ppm-action-field>  
               </my-row>
               <my-row v-show="getRow('PS0103Row0301').isActive" >
@@ -89,11 +89,11 @@
               </my-row>
               <my-row v-show="getRow('PS0103Row04').isActive" >
                   <my-ppm-element-field  fieldRow='PS0103Row04' iconType='PlanRow'></my-ppm-element-field>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row04Value01" :value="this.getRow('PS0103Row04').Value01" :textColor="this.getRow('PS0103Row04').Color01" :BGColor="this.getRow('PS0103Row04').BGColor01" size="18px" ></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row04Value02" :value="this.getRow('PS0103Row04').Value02" :textColor="this.getRow('PS0103Row04').Color02" :BGColor="this.getRow('PS0103Row04').BGColor02" size="18px" ></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row04Value03" :value="this.getRow('PS0103Row04').Value03" :textColor="this.getRow('PS0103Row04').Color03" :BGColor="this.getRow('PS0103Row04').BGColor03" size="18px" ></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row04Value04" :value="this.getRow('PS0103Row04').Value04" :textColor="this.getRow('PS0103Row04').Color04" :BGColor="this.getRow('PS0103Row04').BGColor04" size="18px" ></my-ppm-plan-field2>
-                  <my-ppm-plan-field2 action="updateFieldPS0103Row04Value05" :value="this.getRow('PS0103Row04').Value05" :textColor="this.getRow('PS0103Row04').Color05" :BGColor="this.getRow('PS0103Row04').BGColor05" size="18px" ></my-ppm-plan-field2>
+                  <my-ppm-plan-field action="updateFieldPS0103Row04Value01" :value="this.getRow('PS0103Row04').Value01" :textColor="this.getRow('PS0103Row04').Color01" :BGColor="this.getRow('PS0103Row04').BGColor01" size="18px" ></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row04Value02" :value="this.getRow('PS0103Row04').Value02" :textColor="this.getRow('PS0103Row04').Color02" :BGColor="this.getRow('PS0103Row04').BGColor02" size="18px" ></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row04Value03" :value="this.getRow('PS0103Row04').Value03" :textColor="this.getRow('PS0103Row04').Color03" :BGColor="this.getRow('PS0103Row04').BGColor03" size="18px" ></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row04Value04" :value="this.getRow('PS0103Row04').Value04" :textColor="this.getRow('PS0103Row04').Color04" :BGColor="this.getRow('PS0103Row04').BGColor04" size="18px" ></my-ppm-plan-field>
+                  <my-ppm-plan-field action="updateFieldPS0103Row04Value05" :value="this.getRow('PS0103Row04').Value05" :textColor="this.getRow('PS0103Row04').Color05" :BGColor="this.getRow('PS0103Row04').BGColor05" size="18px" ></my-ppm-plan-field>
                   <my-ppm-action-field resetIcon fieldRow='PS0103Row04' showChilds='showChildsRow04' parallelIcon okIcon chartIcon graphic='showChart04'></my-ppm-action-field>
                  
               </my-row>
