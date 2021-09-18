@@ -1,6 +1,6 @@
 <template>
 <v-app  id="Hintergrund">
-        <Navigation title="BayernPS - Integrierte Planung" />                          
+        <Navigation title="Integrierte Planung" />                          
         <main  >
           <v-container  >
             <router-view/>     
@@ -12,7 +12,7 @@
 
 <script>
 import Navigation from  '@/components/Navigation/TheNavigation'
-import FootBar from  '@/components/Navigation/TheFootBar'
+// import FootBar from  '@/components/Navigation/TheFootBar'
 
 
 export default {
@@ -24,7 +24,7 @@ export default {
   },
   components: {
     Navigation,
-    FootBar
+    // FootBar
   },
   
 }
@@ -54,7 +54,7 @@ export default {
   flex-grow: 1;
 }
 #Hintergrund{
-  background-image: url("./assets/img/Kopernikus.jpg");
+  background-image: url("./assets/img/icebear.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

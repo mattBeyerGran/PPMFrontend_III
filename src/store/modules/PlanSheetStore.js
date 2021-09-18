@@ -21,7 +21,7 @@ PlanData: [
         Value03: 25, Initial03: 0, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 20, Initial04: 0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 20, Initial05: 0, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', '', '', '#182F6D', '#E8F0F7'],
+        
     },
     {   id: 'PS0103Row03',
         RowType: 'PlanRow',
@@ -35,7 +35,7 @@ PlanData: [
         Value03: 25, Initial03: 25, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 20, Initial04: 20, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 23, Initial05: 23, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', '', '', '#182F6D', '#E8F0F7'],
+        
     },
     {   id: 'PS0103Row0301',
         RowType: "GoalRow",
@@ -49,7 +49,7 @@ PlanData: [
         Value03: 6.00, Initial03: 0, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 7.00, Initial04: 0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 5.00, Initial05: 0, Color05: '#182F6D', BGColor05: '#FFFFFF',  
-        ActionData:     ['07', 'referenz', 'Controlling-Vorgabe', '#182F6D', '#E8F0F7'],     
+             
     },
     {   id: 'PS0103Row0302',
         RowType: "GoalRow",
@@ -63,7 +63,7 @@ PlanData: [
         Value03: 18.00, Initial03: 0, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 17.00, Initial04: 0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 16.25, Initial05: 0, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', 'referenz', 'Controlling-Vorgabe', '#182F6D', '#E8F0F7'],     
+            
     },
     {   id: 'PS0103Row0303',
         RowType: "GoalRow",
@@ -77,7 +77,7 @@ PlanData: [
         Value03: 4.50, Initial03: 0, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 12.00, Initial04: 0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 12.50, Initial05: 0, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', 'referenz', 'Controlling-Vorgabe', '#182F6D', '#E8F0F7'],     
+        
     },
     {   id: 'PS0103Row04',
         RowType: "PlanRow",
@@ -91,7 +91,7 @@ PlanData: [
         Value03: 5.50, Initial03: 5.5, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 3.00, Initial04: 3.0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 2.00, Initial05: 2.0, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', 'referenz', 'Controlling-Vorgabe', '#182F6D', '#E8F0F7'],     
+        
     },
     {   id: 'PS0103Row0401',
         RowType: "GoalRow",
@@ -105,7 +105,7 @@ PlanData: [
         Value03: 1.55, Initial03: 0, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 2.00, Initial04: 0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 1.77, Initial05: 0, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', 'referenz', 'Controlling-Vorgabe', '#182F6D', '#E8F0F7'],     
+      
     },
     {   id: 'PS0103Row0402',
         RowType: "GoalRow",
@@ -119,7 +119,7 @@ PlanData: [
         Value03: 7.00, Initial03: 0, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 6.00, Initial04: 0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 5.30, Initial05: 0, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', 'referenz', 'Controlling-Vorgabe', '#182F6D', '#E8F0F7'],     
+      
     },
     {   id: 'PS0103Row05',
         RowType: "GoalRow",
@@ -133,7 +133,7 @@ PlanData: [
         Value03: 8.50, Initial03: 0, Color03: '#182F6D', BGColor03: '#FFFFFF',
         Value04: 11.00, Initial04: 0, Color04: '#182F6D', BGColor04: '#FFFFFF',
         Value05: 3.77, Initial05: 0, Color05: '#182F6D', BGColor05: '#FFFFFF',
-        ActionData:     ['07', 'referenz', 'Controlling-Vorgabe', '#182F6D', '#E8F0F7'],     
+          
     }
     
     ],
