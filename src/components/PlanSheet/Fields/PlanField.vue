@@ -20,8 +20,7 @@ export default {
   props: {
       fieldRow: { type: String, required: false },
       fieldColumn: { type: Number, required: false },
-      // fieldColor: { type: String, required: false },
-      // fieldBGColor: { type: String, required: false },
+      
   },
   computed: {
     ...mapGetters([

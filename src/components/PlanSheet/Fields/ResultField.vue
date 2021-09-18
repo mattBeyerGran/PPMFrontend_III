@@ -1,5 +1,4 @@
 <template>
-    
       <td   class="subtitle-1 text-end ppmTabsBGColor">
       <input disabled type="number" :value="fieldValue" v-bind:style="{color: fieldColor, backgroundColor: fieldBGColor, borderColor: fieldBGColor}">
     </td>
