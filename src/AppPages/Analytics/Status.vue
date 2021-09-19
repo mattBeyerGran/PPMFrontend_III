@@ -1,7 +1,8 @@
 <template>
   
   <v-container >
-    <div class="pa-12 ppmTabsBGColor">
+    <div class="pt-12 ppmTabsBGColor">
+      <div class="pa-6  white">
         <GChart
           class="pt-5"
           :settings="{ packages: ['corechart', 'gantt', 'table'], 'language': 'de'}"
@@ -10,7 +11,9 @@
           :options="ganttOptions"
           ref="gChart"         
         />   
+      </div>
     </div>
+    
        
   </v-container>
     
